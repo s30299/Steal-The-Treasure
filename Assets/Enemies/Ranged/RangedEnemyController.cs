@@ -28,7 +28,7 @@ public class RangedEnemyController : MonoBehaviour
     }
     private void ShootProjectile()
     {
-        var newProjectile = Instantiate(projectile, transform.position, transform.rotation).GetComponent<Projectile>();
+        var newProjectile = Instantiate(projectile, transform.position, projectile.transform.rotation).GetComponent<Projectile>();
         newProjectile.SetDirection(HelperFunctions.Vector3toVector2(player.transform.position) - HelperFunctions.Vector3toVector2(transform.position));
         newProjectile.speed = projectileSpeed;
     }
