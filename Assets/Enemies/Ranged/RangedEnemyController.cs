@@ -6,6 +6,7 @@ public class RangedEnemyController : MonoBehaviour
     private float timer=0;
     public float projectileSpeed = 10f;
     public float detectionRange = 15f;
+    public bool delayOnSpawn = true;
     public GameObject projectile;
     public void Start()
     {
@@ -14,6 +15,7 @@ public class RangedEnemyController : MonoBehaviour
         {
             Debug.LogError("no player in the scene");
         }
+        if (delayOnSpawn) { timer = shootProjectileDelay; }
     }
     public void Update()
     {
@@ -21,9 +23,14 @@ public class RangedEnemyController : MonoBehaviour
         else if (PlayerInRange())
         {
             timer = shootProjectileDelay;
-            var newProjectile =Instantiate(projectile,transform.position,transform.rotation);
-            newProjectile.GetComponent<Projectile>().SetDirection(HelperFunctions.Vector3toVector2(player.transform.position) - HelperFunctions.Vector3toVector2(transform.position));
+            ShootProjectile();
         }
+    }
+    private void ShootProjectile()
+    {
+        var newProjectile = Instantiate(projectile, transform.position, transform.rotation).GetComponent<Projectile>();
+        newProjectile.SetDirection(HelperFunctions.Vector3toVector2(player.transform.position) - HelperFunctions.Vector3toVector2(transform.position));
+        newProjectile.speed = projectileSpeed;
     }
     private bool PlayerInRange()
     {
