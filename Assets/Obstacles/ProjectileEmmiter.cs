@@ -28,6 +28,7 @@ public class ProjectileEmmiter : MonoBehaviour
         {
             InvokeRepeating(nameof(ShootProjectile),0,shootDelay);
         }
+        GetComponent<SpriteRenderer>().enabled = false;
     }
     private void ShootProjectile()
     {

@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CameraFlow : MonoBehaviour
 {
-    [Header("Target")]
-    [SerializeField] private Transform target;
+    //[Header("Target")]
+    /*[SerializeField]*/ private Transform target;
 
     [Header("Smooth Follow")]
     [SerializeField] private float smoothTime = 0.2f;
@@ -15,6 +15,10 @@ public class CameraFlow : MonoBehaviour
     [SerializeField] private Vector3 offset = new Vector3(0f, 1.5f, -10f);
 
     private Vector3 velocity = Vector3.zero;
+    private void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     private void LateUpdate()
     {
