@@ -12,7 +12,7 @@ public class CameraFlow : MonoBehaviour
     [SerializeField] private float maxDistance = 3f;
 
     [Header("Offset")]
-    [SerializeField] private Vector3 offset = new Vector3(0f, 1.5f, -10f);
+    [SerializeField] private Vector3 offset = new(0f, 1.5f, -10f);
 
     private Vector3 velocity = Vector3.zero;
     private void Start()
