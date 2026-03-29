@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.58, y: -0.46, z: 0}
-  m_LocalScale: {x: 0.76135, y: 0.6566644, z: 0.76135}
+  m_LocalScale: {x: 3.5382216, y: 2.7707956, z: 0.76135}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: -3156585709319778645, guid: 19cac923101d54b1cab7247cd7c04ef4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -111,7 +111,8 @@ MonoBehaviour:
   projectileSpeed: 10
   detectionRange: 15
   delayOnSpawn: 1
-  projectile: {fileID: 7028295446581191902, guid: b5dac6bfa55d90240b5de6b60b6cb09d, type: 3}
+  projectile: {fileID: 2722720609612914400, guid: 3adb4a438c654724cadab005982fbe1c, type: 3}
+  attack: {fileID: 7400000, guid: 197479012350c0342bb4cd6251168694, type: 2}
 --- !u!50 &8005088666223424460
 Rigidbody2D:
   serializedVersion: 5
@@ -134,7 +135,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -155,7 +156,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -173,8 +174,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1.9999999}
+  m_Offset: {x: -0.0031810848, y: 0.008732607}
+  m_Size: {x: 0.37019348, y: 0.6461972}
   m_Direction: 0
 --- !u!95 &829532398823793031
 Animator:

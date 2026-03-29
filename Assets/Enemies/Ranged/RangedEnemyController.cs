@@ -9,6 +9,8 @@ public class RangedEnemyController : MonoBehaviour
     public bool delayOnSpawn = true;
     public GameObject projectile;
     private Animator animator;
+    private SpriteRenderer sr;
+    [SerializeField] private AnimationClip attack;
     public void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -18,25 +20,38 @@ public class RangedEnemyController : MonoBehaviour
         }
         if (delayOnSpawn) { timer = shootProjectileDelay; }
         animator=GetComponent<Animator>();
+        sr=GetComponent<SpriteRenderer>();
     }
     public void Update()
     {
+        RotateSpriteTowardsPlayer(player.transform.position);
         if (timer > 0) { timer -= Time.deltaTime; }
         else if (PlayerInRange())
         {
             animator.SetTrigger("attack");
-            timer = shootProjectileDelay;
-            ShootProjectile();
+            timer = shootProjectileDelay+ attack.length;
+            Invoke(nameof(ShootProjectile), attack.length);
         }
     }
     private void ShootProjectile()
-    {
+    {  
         var newProjectile = Instantiate(projectile, transform.position, projectile.transform.rotation).GetComponent<Projectile>();
-        newProjectile.SetDirection(HelperFunctions.Vector3toVector2(player.transform.position) - HelperFunctions.Vector3toVector2(transform.position));
+        newProjectile.SetDirection(HelperFunctions.Vector3toVector2(player.transform.position) - HelperFunctions.Vector3toVector2(transform.position),sr.flipX);
         newProjectile.speed = projectileSpeed;
     }
     private bool PlayerInRange()
     {
         return Vector2.Distance(HelperFunctions.Vector3toVector2(player.transform.position), HelperFunctions.Vector3toVector2(transform.position)) < detectionRange;
+    }
+    private void RotateSpriteTowardsPlayer(Vector2 position)
+    {
+        if (transform.position.x >= position.x)
+        {
+            sr.flipX = true;
+        }
+        else
+        {
+            sr.flipX = false;
+        }
     }
 }

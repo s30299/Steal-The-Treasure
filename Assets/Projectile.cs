@@ -7,9 +7,10 @@ public class Projectile : MonoBehaviour
     private float despawnRange = 50f;
     private float distanceTravelled = 0;
     
-    public void SetDirection(Vector2 direction)
+    public void SetDirection(Vector2 direction,bool flip=false)
     {
         this.direction = direction.normalized;
+        GetComponent<SpriteRenderer>().flipX = flip;
     }
     private void FixedUpdate()
     {

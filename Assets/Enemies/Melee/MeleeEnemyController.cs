@@ -22,6 +22,9 @@ public class MeleeEnemyController : MonoBehaviour
     private SpriteRenderer sr;
     private float timeCounter = 0;
     private bool drawAttackRange = false;
+    private Animator animator;
+    
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -30,8 +33,8 @@ public class MeleeEnemyController : MonoBehaviour
             Debug.LogError("no player in the scene");
         }
         sr=GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -53,38 +56,47 @@ public class MeleeEnemyController : MonoBehaviour
     }
     private void Idle(float distanceToPlayer)
     {
-        sr.color = idleColor;
+        //sr.color = idleColor;
         if (distanceToPlayer <= detectionRange)
         {
             enemyState = EnemyState.Walking;
+            animator.SetBool("IsWalking", true);
         }
     }
     private void Walking(float distanceToPlayer,float delta)
     {
-        MoveTo(player.transform.position, delta);
+        
         if(distanceToPlayer > detectionRange)
         {
             enemyState=EnemyState.Idle;
+            animator.SetBool("IsWalking", false);
         }
         else if(distanceToPlayer < attackRange + Random.Range(-attackRangeMargin,attackRangeMargin) && TimerReached(attackCooldown))
         {
             enemyState=EnemyState.AttackStarted;
+            animator.SetBool("IsWalking", false);
+            animator.SetTrigger("attack");
             StartTimer();
+        }
+        else if (distanceToPlayer > attackRange)
+        {
+            MoveTo(player.transform.position, delta);
         }
     }
     private void AttackStarted() 
     {
-        sr.color = attackBeginColor;
+        //sr.color = attackBeginColor;
         if (TimerReached(attackTelegraphTime))
         {
             enemyState=EnemyState.Attacking;
+            animator.SetTrigger("endTelegraph");
             StartTimer();
         }
     }
     private void Attacking(float distanceToPlayer)
     {
         drawAttackRange = true;
-        sr.color=attackColor;
+        //sr.color=attackColor;
         if (distanceToPlayer <= attackRange)
         {
             Debug.Log("Player Hit");
@@ -92,16 +104,18 @@ public class MeleeEnemyController : MonoBehaviour
         if (TimerReached(attackTime))
         {
             enemyState = EnemyState.AttackEnded;
+            animator.SetTrigger("endAttack");
             StartTimer();
         }
     }
     private void AttackEnded() 
     {
         drawAttackRange = false;
-        sr.color = attackBeginColor;
+        //sr.color = attackBeginColor;
         if (TimerReached(attackEndTime))
         {
             enemyState = EnemyState.Idle;
+            animator.SetTrigger("finishEnd");
             StartTimer();
         }
     }
