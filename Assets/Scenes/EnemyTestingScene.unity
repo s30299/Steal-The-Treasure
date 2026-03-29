@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 456444411}
   - component: {fileID: 456444410}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: SlowEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -528,14 +528,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec392f3ce7122ab4ebc00e08aa00f436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemyController
-  speed: 5
+  speed: 1.5
   detectionRange: 10
   attackRange: 4
   attackRangeMargin: 1
-  attackTelegraphTime: 1
-  attackTime: 1
-  attackEndTime: 1
-  attackCooldown: 1
+  attackTelegraphTime: 2
+  attackTime: 0.2
+  attackEndTime: 0.5
+  attackCooldown: 2
 --- !u!70 &456444411
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -981,7 +981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 955542618009036691, guid: 3f3cb06773b4f874e82ce567ac1e0141, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.18
+      value: -3.28
       objectReference: {fileID: 0}
     - target: {fileID: 955542618009036691, guid: 3f3cb06773b4f874e82ce567ac1e0141, type: 3}
       propertyPath: m_LocalPosition.z

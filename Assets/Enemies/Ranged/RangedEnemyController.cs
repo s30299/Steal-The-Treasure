@@ -8,6 +8,7 @@ public class RangedEnemyController : MonoBehaviour
     public float detectionRange = 15f;
     public bool delayOnSpawn = true;
     public GameObject projectile;
+    private Animator animator;
     public void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -16,12 +17,14 @@ public class RangedEnemyController : MonoBehaviour
             Debug.LogError("no player in the scene");
         }
         if (delayOnSpawn) { timer = shootProjectileDelay; }
+        animator=GetComponent<Animator>();
     }
     public void Update()
     {
         if (timer > 0) { timer -= Time.deltaTime; }
         else if (PlayerInRange())
         {
+            animator.SetTrigger("attack");
             timer = shootProjectileDelay;
             ShootProjectile();
         }

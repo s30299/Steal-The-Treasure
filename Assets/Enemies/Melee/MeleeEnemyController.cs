@@ -66,7 +66,7 @@ public class MeleeEnemyController : MonoBehaviour
         {
             enemyState=EnemyState.Idle;
         }
-        else if(distanceToPlayer < attackRange + attackRangeMargin && TimerReached(attackCooldown))
+        else if(distanceToPlayer < attackRange + Random.Range(-attackRangeMargin,attackRangeMargin) && TimerReached(attackCooldown))
         {
             enemyState=EnemyState.AttackStarted;
             StartTimer();
