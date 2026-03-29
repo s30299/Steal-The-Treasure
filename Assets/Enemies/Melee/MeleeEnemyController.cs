@@ -23,8 +23,11 @@ public class MeleeEnemyController : MonoBehaviour
     private float timeCounter = 0;
     private bool drawAttackRange = false;
     private Animator animator;
-    
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioClip idleSound;
+    [SerializeField] private AudioClip walkSound;
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -34,6 +37,7 @@ public class MeleeEnemyController : MonoBehaviour
         }
         sr=GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
@@ -56,19 +60,28 @@ public class MeleeEnemyController : MonoBehaviour
     }
     private void Idle(float distanceToPlayer)
     {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(idleSound);
+        }
         //sr.color = idleColor;
         if (distanceToPlayer <= detectionRange)
         {
             enemyState = EnemyState.Walking;
+            audioSource.Stop();
             animator.SetBool("IsWalking", true);
         }
     }
     private void Walking(float distanceToPlayer,float delta)
     {
-        
-        if(distanceToPlayer > detectionRange)
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(walkSound);
+        }
+        if (distanceToPlayer > detectionRange)
         {
             enemyState=EnemyState.Idle;
+            audioSource.Stop();
             animator.SetBool("IsWalking", false);
         }
         else if(distanceToPlayer < attackRange + Random.Range(-attackRangeMargin,attackRangeMargin) && TimerReached(attackCooldown))
@@ -89,12 +102,17 @@ public class MeleeEnemyController : MonoBehaviour
         if (TimerReached(attackTelegraphTime))
         {
             enemyState=EnemyState.Attacking;
+            audioSource.Stop();
             animator.SetTrigger("endTelegraph");
             StartTimer();
         }
     }
     private void Attacking(float distanceToPlayer)
     {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(attackSound);
+        }
         drawAttackRange = true;
         //sr.color=attackColor;
         if (distanceToPlayer <= attackRange)
