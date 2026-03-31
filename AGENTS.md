@@ -8,7 +8,7 @@
   - Layers:
     - Default, TransparentFX, Ignore Raycast, projectile, Water, UI, Ground, Ladder, Enemy, Player, Interactable
 - Active game object:
-  - Name: Anchor
-  - Tag: Player
-  - Layer: Player
+  - Name: Upgrade_Collectible
+  - Tag: Ground
+  - Layer: Interactable
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
