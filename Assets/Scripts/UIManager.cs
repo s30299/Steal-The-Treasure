@@ -7,8 +7,10 @@ public class UIManager : MonoSingleton<UIManager>
 {
     [SerializeField] private GameObject gameOverUI;
     private Canvas gameOverCanvas;
+    [SerializeField] private GameObject gameOverFirstButton;
     [SerializeField] private GameObject pauseMenuUI;
     private Canvas pauseMenuCanvas;
+    [SerializeField] private GameObject pauseFirstButton;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
@@ -18,7 +20,7 @@ public class UIManager : MonoSingleton<UIManager>
     public void EnableGameOverUI()
     {
         gameOverCanvas.enabled = true;
-        EventSystem.current.SetSelectedGameObject(GameObject.Find("ReviveButton"));
+        EventSystem.current.SetSelectedGameObject(gameOverFirstButton);
     }
     public void DisableGameOverUI() {
         gameOverCanvas.enabled = false;
@@ -35,7 +37,7 @@ public class UIManager : MonoSingleton<UIManager>
     public void Pause()
     {
         Time.timeScale=0;
-        EventSystem.current.SetSelectedGameObject(GameObject.Find("ContinueButton"));
+        EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         pauseMenuCanvas.enabled = true;
         GameObject.Find("VolumeSlider").GetComponent<Slider>().value = AudioManager.effectsVolume;
         GameObject.Find("MusicVolumeSlider").GetComponent<Slider>().value = AudioManager.musicVolume;

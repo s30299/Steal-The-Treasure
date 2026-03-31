@@ -7,6 +7,7 @@ public class PlayerController : Controller
     public void Start()
     {
         ui = FindAnyObjectByType<UIManager>();
+        UnlockInputs();
     }
     public void Update()
     {
@@ -23,6 +24,7 @@ public class PlayerController : Controller
     public void OnDeath(){
         if (Time.timeAsDouble - lastOnDeathReceived >= 1)
         {
+            LockInputs();
             lastOnDeathReceived = Time.timeAsDouble;
             ui.EnableGameOverUI();
             Invoke(nameof(StopTime), 0.5f);
