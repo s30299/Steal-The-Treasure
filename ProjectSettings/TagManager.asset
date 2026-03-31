@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ladder
   - Enemy
+  - System
+  - RespawnPoint
   layers:
   - Default
   - TransparentFX

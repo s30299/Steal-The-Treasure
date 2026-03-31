@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1337467508549601085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4102580130139927012}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: RespawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4102580130139927012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337467508549601085}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.62, y: 3.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5464184827278220446}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1670089985055498488
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd000bedf86bf440b6cf1ec6cca2644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFlow
-  target: {fileID: 0}
   smoothTime: 0.2
   maxDistance: 3
   offset: {x: 0, y: 1.5, z: -10}
@@ -164,7 +194,7 @@ GameObject:
   - component: {fileID: 5464184827278220446}
   m_Layer: 0
   m_Name: System
-  m_TagString: Untagged
+  m_TagString: System
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,5 +214,6 @@ Transform:
   m_Children:
   - {fileID: 1639907516278352600}
   - {fileID: 8068026837281196395}
+  - {fileID: 4102580130139927012}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
