@@ -17,7 +17,8 @@ public class Dash : Capability
     private float _IFrames => _definition.GetIFrames(level);
     private int _maxDashes => _definition.GetMaxDashes(level);
     private float _dashRechargeTime => _definition.GetDashRechargeTime(level);
-
+    private  Controller controller => Controller;
+    private float _inputDeadzone = 0.1f;
 
     private int _currentDashes;
     private bool _isDashing;
@@ -55,6 +56,10 @@ public class Dash : Capability
     protected override void Update()
     {
         base.Update();
+
+        Vector2 move = controller.RetrieveMoveInput();
+        if (Mathf.Abs(move.x) > _inputDeadzone)
+            controller.LastHorizontalFacing = Vector2.right * Mathf.Sign(move.x);
 
         if (!CanRegisterInput()) return;
 
