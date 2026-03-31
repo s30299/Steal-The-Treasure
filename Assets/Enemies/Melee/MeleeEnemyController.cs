@@ -16,9 +16,9 @@ public class MeleeEnemyController : MonoBehaviour
     [SerializeField] private float attackEndTime;
     [SerializeField] private float attackCooldown;
 
-    private Color attackBeginColor = Color.orange;
-    private Color attackColor = Color.red;
-    private Color idleColor = Color.white;
+    //private Color attackBeginColor = Color.orange;
+    //private Color attackColor = Color.red;
+    //private Color idleColor = Color.white;
     private SpriteRenderer sr;
     private float timeCounter = 0;
     private bool drawAttackRange = false;

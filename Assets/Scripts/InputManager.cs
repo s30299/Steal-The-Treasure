@@ -6,7 +6,7 @@ public class InputManager : MonoSingleton<InputManager>
 {
     public static InputSystem_Actions InputActions;
 
-    private void Awake()
+    new private void Awake()
        => EnableInput();
 
     private void EnableInput()
@@ -23,4 +23,5 @@ public class InputManager : MonoSingleton<InputManager>
     public static InputAction ActionInteract => InputActions.Player.Interact;
     public static InputAction ActionAttack => InputActions.Player.Attack;
     public static InputAction ActionDash => InputActions.Player.Dash;
+    public static InputAction ActionPause => InputActions.UI.Pause;
 }
