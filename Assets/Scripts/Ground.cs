@@ -6,7 +6,6 @@ public class GroundDetector : MonoBehaviour
     public bool OnGround { get; private set; }
     public bool OnWall { get; private set; }
     public bool OnLadder { get; private set; }
-    public Collider2D CurrentLadder { get; private set; }
     public float Friction { get; private set; }
     public Vector2 ContactNormal { get; private set; }
 
@@ -31,12 +30,6 @@ public class GroundDetector : MonoBehaviour
         col = GetComponent<Collider2D>();
     }
 
-    public void ForceOnGround()
-    {
-        OnGround = true;
-        groundGraceTimer = groundGraceTime;
-    }
-
     private void FixedUpdate()
     {
         if (groundGraceTimer > 0f)
@@ -44,66 +37,6 @@ public class GroundDetector : MonoBehaviour
 
         CheckGround();
         CheckLadder();
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        EvaluateCollision(collision);
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        EvaluateCollision(collision);
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        // Nie zerujemy od razu OnGround/OnWall,
-        // bo możemy nadal dotykać innego collidera.
-        groundGraceTimer = groundGraceTime;
-    }
-
-    private void EvaluateCollision(Collision2D collision)
-    {
-        if (((1 << collision.gameObject.layer) & groundLayerMask) == 0)
-            return;
-
-        bool foundGround = false;
-        bool foundWall = false;
-        float bestNormalScore = float.NegativeInfinity;
-        Vector2 bestNormal = Vector2.zero;
-
-        for (int i = 0; i < collision.contactCount; i++)
-        {
-            ContactPoint2D contact = collision.GetContact(i);
-            Vector2 normal = contact.normal;
-
-            if (normal.y > bestNormalScore)
-            {
-                bestNormalScore = normal.y;
-                bestNormal = normal;
-            }
-
-            if (normal.y >= groundNormalMinY)
-                foundGround = true;
-
-            if (Mathf.Abs(normal.x) >= wallNormalMinX)
-                foundWall = true;
-        }
-
-        if (foundGround)
-        {
-            OnGround = true;
-            ContactNormal = bestNormal;
-            groundGraceTimer = groundGraceTime;
-            PhysicsMaterial2D mat = collision.collider.sharedMaterial;
-            Friction = mat != null ? mat.friction : 0f;
-        }
-
-        if (foundWall)
-        {
-            OnWall = true;
-        }
     }
 
     private void CheckGround()
@@ -135,6 +68,7 @@ public class GroundDetector : MonoBehaviour
         {
             OnGround = false;
             Friction = 0f;
+            ContactNormal = Vector2.zero;
         }
 
         OnWall = foundWall;
@@ -180,17 +114,15 @@ public class GroundDetector : MonoBehaviour
     }
 
     private void CheckLadder()
-{
-    ContactFilter2D filter = new ContactFilter2D();
-    filter.useLayerMask = true;
-    filter.layerMask = ladderLayerMask;
-    filter.useTriggers = true;
+    {
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.useLayerMask = true;
+        filter.layerMask = ladderLayerMask;
+        filter.useTriggers = true;
 
-    int count = col.Overlap(filter, ladderResults);
-
-    OnLadder = count > 0;
-    CurrentLadder = OnLadder ? ladderResults[0] : null;
-}
+        int count = col.Overlap(filter, ladderResults);
+        OnLadder = count > 0;
+    }
 
     private void OnDrawGizmosSelected()
     {

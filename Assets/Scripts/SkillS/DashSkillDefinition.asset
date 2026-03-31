@@ -17,13 +17,11 @@ MonoBehaviour:
   maxLevel: 2
   _dashSpeedPerLevel:
   - 19.3
-  - 36.1
   _dashDurationPerLevel:
-  - 1
   - 1
   _IFramesPerLevel:
   - 1
   _maxDashesPerLevel: 01000000
   _dashRechargeTimePerLevel:
+  - 2.5
   - 1
-  - 2

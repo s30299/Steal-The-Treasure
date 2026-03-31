@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d33feae8a13ea479ffef522abd174d, type: 3}
   m_Name: PlayerProgress
   m_EditorClassIdentifier: Assembly-CSharp::PlayerProgress
-  skills: []
+  skills:
+  - skillDefinition: {fileID: 11400000, guid: 1cfc48612d3d5e04e9d881d20859bb70, type: 2}
+    currentLevel: 1
+  - skillDefinition: {fileID: 11400000, guid: 71281e65bf00c284988df88fef57237e, type: 2}
+    currentLevel: 0

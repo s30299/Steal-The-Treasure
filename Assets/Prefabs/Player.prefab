@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 8496475429021170467}
   - component: {fileID: 5338329239368329111}
   - component: {fileID: 1525131716088605987}
+  - component: {fileID: 4943036796649052669}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -66,7 +67,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.60761, y: 1.57443, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.97, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2575955806424852575}
@@ -121,7 +122,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -156,7 +157,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &3147436294282371303
 CapsuleCollider2D:
@@ -244,12 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90e3c9546fc26fc46b68f2fc6c0edba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jump
-  _jumpHeight: 3
-  _maxAirJumps: 1
-  _downwardMovementMultiplier: 3
-  _upwardMovementMultiplier: 1.7
-  _coyoteTime: 0.2
-  _jumpBufferTime: 0.2
+  _definition: {fileID: 11400000, guid: 71281e65bf00c284988df88fef57237e, type: 2}
+  _progress: {fileID: 11400000, guid: ef48699030b726c4d895a627d89cf013, type: 2}
   _verticalVelocityEpsilon: 0.05
 --- !u!114 &8496475429021170467
 MonoBehaviour:
@@ -293,3 +290,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 1
+--- !u!114 &4943036796649052669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3747146502235351152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b67ba3804634ac489ba37f1c42446f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interact
+  _interactionRange: 2
+  _interactionLayers:
+    serializedVersion: 2
+    m_Bits: 1024

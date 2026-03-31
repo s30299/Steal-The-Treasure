@@ -3,33 +3,33 @@ using UnityEngine;
 
 public class Jump : Capability
 {
-    [SerializeField, Range(0f, 10f)] private float _jumpHeight = 3f;
-    [SerializeField, Range(0, 3)] private int _maxAirJumps = 1; // 1 = double jump
-    [SerializeField, Range(0f, 8f)] private float _downwardMovementMultiplier = 3f;
-    [SerializeField, Range(0f, 8f)] private float _upwardMovementMultiplier = 1.7f;
-    [SerializeField, Range(0f, 0.3f)] private float _coyoteTime = 0.2f;
-    [SerializeField, Range(0f, 0.3f)] private float _jumpBufferTime = 0.2f;
+    [SerializeField] private JumpSkillDefinition _definition;
+    [SerializeField] private PlayerProgress _progress;
     [SerializeField, Range(0f, 1f)] private float _verticalVelocityEpsilon = 0.05f;
 
-    public int MaxAirJumps { get => _maxAirJumps; set => _maxAirJumps = value; }
+    private SkillState _skillState;
+
+    private int level => _skillState.currentLevel;
+    private float _jumpHeight => _definition.GetJumpHeight(level);
+    private int _maxAirJumps => _definition.GetMaxAirJumps(level);
+    private float _downwardMovementMultiplier => _definition.GetDownwardMovementMultiplier(level);
+    private float _upwardMovementMultiplier => _definition.GetUpwardMovementMultiplier(level);
+    private float _coyoteTime => _definition.GetCoyoteTime(level);
+    private float _jumpBufferTime => _definition.GetJumpBufferTime(level);
 
     private Vector2 _velocity;
 
-    // ile air jumpów już zużyto
     private int _jumpPhase;
-
     private float _defaultGravityScale;
     private float _jumpSpeed;
     private float _coyoteCounter;
     private float _jumpBufferCounter;
 
     private bool _desiredJump;
-    private bool _isJumping;
     private bool _isJumpReset;
-    private bool _landed;
     private bool _forceJumpNow;
 
-    public Action OnJumped, OnLanded;
+    public Action OnJumped;
 
     protected override void Awake()
     {
@@ -37,6 +37,17 @@ public class Jump : Capability
 
         _isJumpReset = true;
         _defaultGravityScale = Controller.Rigidbody2D.gravityScale;
+
+        _skillState = _progress.skills.Find(skill => skill.skillDefinition == _definition);
+        if (_skillState == null)
+        {
+            _skillState = new SkillState
+            {
+                skillDefinition = _definition,
+                currentLevel = 1
+            };
+            _progress.skills.Add(_skillState);
+        }
     }
 
     protected override void Update()
@@ -45,6 +56,39 @@ public class Jump : Capability
 
         RegisterInput();
         HandleJumpReset();
+    }
+
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
+
+        if (IsLocked)
+            return;
+
+        _velocity = Controller.Rigidbody2D.linearVelocity;
+
+        bool touchingGround = Controller.Ground.OnGround;
+        bool touchingLadder = Controller.Ground.OnLadder;
+        bool touchingWall = Controller.Ground.OnWall;
+
+        float vy = _velocity.y;
+        bool vyIsZero = Mathf.Abs(vy) < _verticalVelocityEpsilon;
+
+        if ((touchingGround && vyIsZero) || touchingLadder || (touchingWall && vy < 0f))
+        {
+            Grounded();
+        }
+        else
+        {
+            _coyoteCounter -= Time.fixedDeltaTime;
+        }
+
+        if (_jumpBufferCounter > 0f || _forceJumpNow)
+            JumpAction();
+
+        SetGravity();
+
+        Controller.Rigidbody2D.linearVelocity = _velocity;
     }
 
     private void RegisterInput()
@@ -73,53 +117,10 @@ public class Jump : Capability
         }
     }
 
-    protected override void FixedUpdate()
-    {
-        base.FixedUpdate();
-
-        if (IsLocked)
-            return;
-
-        _velocity = Controller.Rigidbody2D.linearVelocity;
-
-        bool touchingGround = Controller.Ground.OnGround;
-        bool touchingLadder = Controller.Ground.OnLadder;
-
-        float vy = _velocity.y;
-        bool vyIsZero = Mathf.Abs(vy) < _verticalVelocityEpsilon;
-
-        // Reset skoków na ziemi
-        if (touchingGround && vyIsZero)
-        {
-            Grounded();
-        }
-        // Reset skoków na drabinie - zawsze, niezależnie od strony kontaktu
-        else if (touchingLadder)
-        {
-            Grounded();
-        }
-        else if (Controller.Ground.OnWall && vy < 0f)
-        {
-            Grounded();
-        }
-        else
-        {
-            _coyoteCounter -= Time.fixedDeltaTime;
-        }
-
-        if (_jumpBufferCounter > 0f || _forceJumpNow)
-            JumpAction();
-
-        SetGravity();
-
-        Controller.Rigidbody2D.linearVelocity = _velocity;
-    }
-
     public void Grounded(float coyoteTimeMultiplier = 1f)
     {
         _jumpPhase = 0;
         _coyoteCounter = _coyoteTime * coyoteTimeMultiplier;
-        _isJumping = false;
     }
 
     private void SetGravity()
@@ -127,7 +128,6 @@ public class Jump : Capability
         if (IsLocked)
             return;
 
-        // Na drabinie zwykle nie chcesz ciężkiej grawitacji od skoku
         if (Controller.Ground.OnLadder)
         {
             Controller.Rigidbody2D.gravityScale = _defaultGravityScale;
@@ -166,7 +166,6 @@ public class Jump : Capability
 
         OnJumped?.Invoke();
 
-        // skok z ziemi/drabiny/coyote nie zużywa air jumpa
         if (groundedJump)
         {
             _jumpPhase = 0;
@@ -178,8 +177,6 @@ public class Jump : Capability
 
         _jumpBufferCounter = 0f;
         _coyoteCounter = 0f;
-        _isJumping = true;
-        _landed = false;
         _forceJumpNow = false;
 
         _jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y * Controller.Rigidbody2D.gravityScale * _jumpHeight);
@@ -204,28 +201,7 @@ public class Jump : Capability
 
     public void Bounced()
     {
-        _isJumping = true;
-
-        // odbicie nie powinno zabierać dodatkowego skoku
         if (_jumpPhase > 0)
             _jumpPhase--;
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.contactCount > 0 && other.contacts[0].normal == new Vector2(0, -1))
-            return;
-
-        if (_landed)
-            return;
-
-        OnLanded?.Invoke();
-        _landed = true;
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (!Controller.Ground.OnWall && !Controller.Ground.OnGround && !Controller.Ground.OnLadder)
-            _landed = false;
     }
 }
