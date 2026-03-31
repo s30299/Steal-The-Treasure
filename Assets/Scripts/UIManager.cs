@@ -16,8 +16,8 @@ public class UIManager : MonoSingleton<UIManager>
     {
         gameOverCanvas = gameOverUI.GetComponent<Canvas>();
         pauseMenuCanvas = pauseMenuUI.GetComponent<Canvas>();
-        GameObject.Find("VolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume", 1);
-        GameObject.Find("MusicVolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("musicVolume", 1);
+        //GameObject.Find("VolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume", 1);
+        //GameObject.Find("MusicVolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("musicVolume", 1);
     }
     public void EnableGameOverUI()
     {
