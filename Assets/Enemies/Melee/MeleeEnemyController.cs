@@ -50,7 +50,7 @@ public class MeleeEnemyController : MonoBehaviour
         }
         else
         {
-            audioSource.volume = 1;
+            audioSource.volume = AudioManager.effectsVolume;
         }
     }
     private void StateBehavior(float delta)

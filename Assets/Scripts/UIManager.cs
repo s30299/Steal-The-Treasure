@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoSingleton<UIManager>
 {
@@ -36,6 +37,8 @@ public class UIManager : MonoSingleton<UIManager>
         Time.timeScale=0;
         EventSystem.current.SetSelectedGameObject(GameObject.Find("ContinueButton"));
         pauseMenuCanvas.enabled = true;
+        GameObject.Find("VolumeSlider").GetComponent<Slider>().value = AudioManager.effectsVolume;
+        GameObject.Find("MusicVolumeSlider").GetComponent<Slider>().value = AudioManager.musicVolume;
     }
     public void Unpause()
     {
@@ -45,13 +48,10 @@ public class UIManager : MonoSingleton<UIManager>
     }
     public void SwitchPause()
     {
-        if (pauseMenuCanvas.enabled)
+        if (!gameOverCanvas.enabled)
         {
-            Unpause();
-        }
-        else
-        {
-            Pause();
+            if (pauseMenuCanvas.enabled){Unpause();}
+            else{Pause();}
         }
     }
     public void QuitGame()
