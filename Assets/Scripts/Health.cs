@@ -1,5 +1,3 @@
-using System.Dynamic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Health : MonoBehaviour, IDamageable
@@ -7,6 +5,7 @@ public class Health : MonoBehaviour, IDamageable
     [SerializeField] private int maxHealth = 3;
     private int current;
     private Rigidbody2D rb;
+    private PlayerController playerController;
 
     public bool IsInvincible { get; set; } = false;
     public int CurrentHealth => current;
@@ -16,6 +15,7 @@ public class Health : MonoBehaviour, IDamageable
     {
         current = maxHealth;
         rb = GetComponent<Rigidbody2D>();
+        playerController = GetComponent<PlayerController>();
     }
 
     public int TakeDamage(int amount, Vector2 hitDirection, float knockback, GameObject attacker = null)
@@ -35,6 +35,6 @@ public class Health : MonoBehaviour, IDamageable
 
     protected virtual void Die(GameObject attacker = null)
     {
-        Destroy(gameObject);
+        playerController.OnDeath();
     }
 }

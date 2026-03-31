@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject.FindWithTag("Player").GetComponent<PlayerController>().OnDeath();
+            GameObject.FindWithTag("Player").GetComponent<Health>().TakeDamage(1,direction,1,gameObject);
         }
         if (!collision.gameObject.CompareTag("Enemy"))
         {

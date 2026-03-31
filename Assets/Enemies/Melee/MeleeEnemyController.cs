@@ -125,7 +125,7 @@ public class MeleeEnemyController : MonoBehaviour
         //sr.color=attackColor;
         if (distanceToPlayer <= attackRange)
         {
-            player.GetComponent<PlayerController>().OnDeath();
+            player.GetComponent<Health>().TakeDamage(1,Vector2.zero,0,gameObject);
         }
         if (TimerReached(attackTime))
         {

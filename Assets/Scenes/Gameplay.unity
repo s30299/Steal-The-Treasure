@@ -3498,38 +3498,6 @@ Transform:
   - {fileID: 1606691771}
   m_Father: {fileID: 243238095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2030169626 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3747146502235351152, guid: 5ce2292e9c732444f9dd50d91054f2ef, type: 3}
-  m_PrefabInstance: {fileID: 245311780942684286}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2030169627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030169626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a079dbbf51a89ad4a83c5e26d14e4efa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Dash
-  _definition: {fileID: 11400000, guid: 1cfc48612d3d5e04e9d881d20859bb70, type: 2}
-  _progress: {fileID: 11400000, guid: ef48699030b726c4d895a627d89cf013, type: 2}
---- !u!114 &2030169636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030169626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dce427e39099cc44b46af1ad0317f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHealth: 1
 --- !u!1001 &245311780942684286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3582,20 +3550,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5933628280225399048, guid: 5ce2292e9c732444f9dd50d91054f2ef, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3747146502235351152, guid: 5ce2292e9c732444f9dd50d91054f2ef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2030169627}
-    - targetCorrespondingSourceObject: {fileID: 3747146502235351152, guid: 5ce2292e9c732444f9dd50d91054f2ef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2030169636}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce2292e9c732444f9dd50d91054f2ef, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
