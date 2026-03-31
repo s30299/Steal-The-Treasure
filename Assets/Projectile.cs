@@ -14,6 +14,10 @@ public class Projectile : MonoBehaviour
         this.direction = direction.normalized;
         GetComponent<SpriteRenderer>().flipX = flip;
         audioSource=GetComponent<AudioSource>();
+        if (audioSource != null)
+        {
+            audioSource.volume = PlayerPrefs.GetFloat("effectsVolume", 1);
+        }
     }
     private void FixedUpdate()
     {
@@ -26,6 +30,7 @@ public class Projectile : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         if (audioSource != null)
         {
             audioSource.Stop();
@@ -33,7 +38,7 @@ public class Projectile : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("player hit");
+            GameObject.FindWithTag("Player").GetComponent<PlayerController>().OnDeath();
         }
         if (!collision.gameObject.CompareTag("Enemy"))
         {

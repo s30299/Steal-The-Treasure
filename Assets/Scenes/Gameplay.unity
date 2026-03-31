@@ -3508,9 +3508,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 482005358882369095, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482005358882369095, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482005358882369095, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1315886558369904566, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1315886558369904566, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895706891964302728, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895706891964302728, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 975926972433668811, guid: 92b0b3c65d1cd1c4e9170b8f899009a0, type: 3}
       propertyPath: m_Name
       value: System
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454998555396734671, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454998555396734671, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454998555396734671, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5902410198443335291, guid: 92b0b3c65d1cd1c4e9170b8f899009a0, type: 3}
       propertyPath: m_LocalPosition.x

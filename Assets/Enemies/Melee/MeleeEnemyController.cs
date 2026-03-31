@@ -16,9 +16,9 @@ public class MeleeEnemyController : MonoBehaviour
     [SerializeField] private float attackEndTime;
     [SerializeField] private float attackCooldown;
 
-    private Color attackBeginColor = Color.orange;
-    private Color attackColor = Color.red;
-    private Color idleColor = Color.white;
+    //private Color attackBeginColor = Color.orange;
+    //private Color attackColor = Color.red;
+    //private Color idleColor = Color.white;
     private SpriteRenderer sr;
     private float timeCounter = 0;
     private bool drawAttackRange = false;
@@ -44,6 +44,14 @@ public class MeleeEnemyController : MonoBehaviour
     {
         StateBehavior(Time.deltaTime);
         UpdateTimer(Time.deltaTime);
+        if (Time.timeScale == 0)
+        {
+            audioSource.volume = 0;
+        }
+        else
+        {
+            audioSource.volume = PlayerPrefs.GetFloat("effectsVolume",1);
+        }
     }
     private void StateBehavior(float delta)
     {
@@ -117,7 +125,7 @@ public class MeleeEnemyController : MonoBehaviour
         //sr.color=attackColor;
         if (distanceToPlayer <= attackRange)
         {
-            Debug.Log("Player Hit");
+            player.GetComponent<PlayerController>().OnDeath();
         }
         if (TimerReached(attackTime))
         {
