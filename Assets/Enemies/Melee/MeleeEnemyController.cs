@@ -44,6 +44,14 @@ public class MeleeEnemyController : MonoBehaviour
     {
         StateBehavior(Time.deltaTime);
         UpdateTimer(Time.deltaTime);
+        if (Time.timeScale == 0)
+        {
+            audioSource.volume = 0;
+        }
+        else
+        {
+            audioSource.volume = 1;
+        }
     }
     private void StateBehavior(float delta)
     {
