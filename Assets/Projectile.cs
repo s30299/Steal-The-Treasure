@@ -14,6 +14,10 @@ public class Projectile : MonoBehaviour
         this.direction = direction.normalized;
         GetComponent<SpriteRenderer>().flipX = flip;
         audioSource=GetComponent<AudioSource>();
+        if (audioSource != null)
+        {
+            audioSource.volume = PlayerPrefs.GetFloat("effectsVolume", 1);
+        }
     }
     private void FixedUpdate()
     {

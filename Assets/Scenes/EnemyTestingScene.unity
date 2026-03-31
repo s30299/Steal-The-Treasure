@@ -772,10 +772,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: System
       objectReference: {fileID: 0}
-    - target: {fileID: 2883250571377588207, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
-      propertyPath: orthographic size
-      value: 7.73
-      objectReference: {fileID: 0}
     - target: {fileID: 3454998555396734671, guid: 95b9341e14d0e2d489fccdeae71f8fa3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

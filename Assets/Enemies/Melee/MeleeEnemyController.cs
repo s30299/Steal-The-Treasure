@@ -50,7 +50,7 @@ public class MeleeEnemyController : MonoBehaviour
         }
         else
         {
-            audioSource.volume = AudioManager.effectsVolume;
+            audioSource.volume = PlayerPrefs.GetFloat("effectsVolume",1);
         }
     }
     private void StateBehavior(float delta)

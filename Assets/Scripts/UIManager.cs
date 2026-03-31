@@ -16,6 +16,8 @@ public class UIManager : MonoSingleton<UIManager>
     {
         gameOverCanvas = gameOverUI.GetComponent<Canvas>();
         pauseMenuCanvas = pauseMenuUI.GetComponent<Canvas>();
+        GameObject.Find("VolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume", 1);
+        GameObject.Find("MusicVolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("musicVolume", 1);
     }
     public void EnableGameOverUI()
     {
@@ -39,8 +41,8 @@ public class UIManager : MonoSingleton<UIManager>
         Time.timeScale=0;
         EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         pauseMenuCanvas.enabled = true;
-        GameObject.Find("VolumeSlider").GetComponent<Slider>().value = AudioManager.effectsVolume;
-        GameObject.Find("MusicVolumeSlider").GetComponent<Slider>().value = AudioManager.musicVolume;
+        GameObject.Find("VolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume",1);
+        GameObject.Find("MusicVolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("musicVolume",1);
     }
     public void Unpause()
     {
