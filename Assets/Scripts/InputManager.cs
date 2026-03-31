@@ -6,7 +6,7 @@ public class InputManager : MonoSingleton<InputManager>
 {
     public static InputSystem_Actions InputActions;
 
-    private void Awake()
+    protected override void Awake()
        => EnableInput();
 
     private void EnableInput()
