@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8013fc4bd404ed2429ce9457eb786f7f, type: 3}
+  m_Name: DashSkillDefinition
+  m_EditorClassIdentifier: Assembly-CSharp::DashSkillDefinition
+  id: dash
+  skillType: 2
+  maxLevel: 2
+  _dashSpeedPerLevel:
+  - 19.3
+  - 36.1
+  _dashDurationPerLevel:
+  - 1
+  - 1
+  _IFramesPerLevel:
+  - 1
+  _maxDashesPerLevel: 01000000
+  _dashRechargeTimePerLevel:
+  - 1
+  - 2
