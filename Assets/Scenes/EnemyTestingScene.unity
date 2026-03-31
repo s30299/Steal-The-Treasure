@@ -983,6 +983,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.021739122
       objectReference: {fileID: 0}
+    - target: {fileID: 6851772150877906984, guid: ac305af82375959438f88cbd688e2234, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
