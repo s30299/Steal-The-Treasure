@@ -14,7 +14,7 @@ Unity 2d platform game
 #### Skeleton
 - **Idle sound** [Rattling Bones](https://pixabay.com/sound-effects/film-special-effects-rattling-bones-105394/) by spookymodem (Freesound)
 - **Walking sound** [step skeleton](https://pixabay.com/sound-effects/film-special-effects-step-skeleton-47785/) by RedRoxPeterPepper (Freesound)
-- **Attack sound** []() by
+- **Attack sound** [Sword Slash](https://pixabay.com/sound-effects/film-special-effects-sword-slash-315218/)
 #### Zombie
 - **Idle sound** [Guttural Snarl](https://pixabay.com/sound-effects/guttural-snarl-454250/) by DRAGON-STUDIO
 - **Walking sound** [Walking sound effect](https://pixabay.com/sound-effects/film-special-effects-walking-sound-effect-272246/) by u_3x9ga8wevj
