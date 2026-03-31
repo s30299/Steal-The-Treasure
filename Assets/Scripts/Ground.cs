@@ -14,14 +14,17 @@ public class GroundDetector : MonoBehaviour
     [SerializeField, Range(0f, 1f)] private float groundNormalMinY = 0.7f;
     [SerializeField, Range(0f, 1f)] private float wallNormalMinX = 0.9f;
     [SerializeField, Range(0f, 0.5f)] private float groundCheckDistance = 0.08f;
-    [SerializeField] private LayerMask groundLayerMask = ~0;
+    [SerializeField] private LayerMask groundLayerMask;
     [SerializeField, Range(0f, 0.2f)] private float groundGraceTime = 0.05f;
 
     [Header("Ladder Detection")]
-    [SerializeField] private string ladderTag = "Ladder";
+    [SerializeField] private LayerMask ladderLayerMask;
 
     private Collider2D col;
     private float groundGraceTimer;
+
+    private readonly Collider2D[] ladderResults = new Collider2D[8];
+    private readonly RaycastHit2D[] groundHits = new RaycastHit2D[8];
 
     private void Awake()
     {
@@ -39,10 +42,8 @@ public class GroundDetector : MonoBehaviour
         if (groundGraceTimer > 0f)
             groundGraceTimer -= Time.fixedDeltaTime;
 
-        if (!OnGround && groundGraceTimer <= 0f)
-        {
-            CheckGroundByRaycast();
-        }
+        CheckGround();
+        CheckLadder();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -57,18 +58,19 @@ public class GroundDetector : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        OnGround = false;
-        OnWall = false;
-        Friction = 0f;
-        ContactNormal = Vector2.zero;
+        // Nie zerujemy od razu OnGround/OnWall,
+        // bo możemy nadal dotykać innego collidera.
         groundGraceTimer = groundGraceTime;
     }
 
     private void EvaluateCollision(Collision2D collision)
     {
+        if (((1 << collision.gameObject.layer) & groundLayerMask) == 0)
+            return;
+
         bool foundGround = false;
         bool foundWall = false;
-        float bestNormalY = -1f;
+        float bestNormalScore = float.NegativeInfinity;
         Vector2 bestNormal = Vector2.zero;
 
         for (int i = 0; i < collision.contactCount; i++)
@@ -76,9 +78,9 @@ public class GroundDetector : MonoBehaviour
             ContactPoint2D contact = collision.GetContact(i);
             Vector2 normal = contact.normal;
 
-            if (normal.y > bestNormalY)
+            if (normal.y > bestNormalScore)
             {
-                bestNormalY = normal.y;
+                bestNormalScore = normal.y;
                 bestNormal = normal;
             }
 
@@ -89,86 +91,106 @@ public class GroundDetector : MonoBehaviour
                 foundWall = true;
         }
 
-        OnGround = foundGround;
-        OnWall = foundWall;
-        ContactNormal = bestNormal;
-
-        if (OnGround)
-        {
-            groundGraceTimer = groundGraceTime;
-            RetrieveFriction(collision.collider);
-        }
-        else
-        {
-            Friction = 0f;
-        }
-
-        if (!OnGround)
-            CheckGroundByRaycast();
-    }
-
-    private void CheckGroundByRaycast()
-    {
-        Vector2 origin = GetRayOrigin();
-
-        RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, groundCheckDistance, groundLayerMask);
-
-        if (hit.collider != null && hit.normal.y >= groundNormalMinY)
+        if (foundGround)
         {
             OnGround = true;
-            ContactNormal = hit.normal;
-
-            PhysicsMaterial2D mat = hit.collider.sharedMaterial;
+            ContactNormal = bestNormal;
+            groundGraceTimer = groundGraceTime;
+            PhysicsMaterial2D mat = collision.collider.sharedMaterial;
             Friction = mat != null ? mat.friction : 0f;
+        }
+
+        if (foundWall)
+        {
+            OnWall = true;
+        }
+    }
+
+    private void CheckGround()
+    {
+        Bounds b = col.bounds;
+
+        Vector2 originLeft = new Vector2(b.min.x + 0.05f, b.min.y + 0.02f);
+        Vector2 originCenter = new Vector2(b.center.x, b.min.y + 0.02f);
+        Vector2 originRight = new Vector2(b.max.x - 0.05f, b.min.y + 0.02f);
+
+        bool foundGround = false;
+        bool foundWall = false;
+        Vector2 bestNormal = Vector2.zero;
+        float bestNormalY = float.NegativeInfinity;
+        float bestFriction = 0f;
+
+        CheckGroundRay(originLeft, ref foundGround, ref foundWall, ref bestNormal, ref bestNormalY, ref bestFriction);
+        CheckGroundRay(originCenter, ref foundGround, ref foundWall, ref bestNormal, ref bestNormalY, ref bestFriction);
+        CheckGroundRay(originRight, ref foundGround, ref foundWall, ref bestNormal, ref bestNormalY, ref bestFriction);
+
+        if (foundGround)
+        {
+            OnGround = true;
+            ContactNormal = bestNormal;
+            Friction = bestFriction;
+            groundGraceTimer = groundGraceTime;
         }
         else if (groundGraceTimer <= 0f)
         {
             OnGround = false;
             Friction = 0f;
         }
+
+        OnWall = foundWall;
     }
 
-    private Vector2 GetRayOrigin()
+    private void CheckGroundRay(
+        Vector2 origin,
+        ref bool foundGround,
+        ref bool foundWall,
+        ref Vector2 bestNormal,
+        ref float bestNormalY,
+        ref float bestFriction)
     {
-        Bounds b = col.bounds;
-        return new Vector2(b.center.x, b.min.y + 0.02f);
-    }
+        int hitCount = Physics2D.RaycastNonAlloc(origin, Vector2.down, groundHits, groundCheckDistance, groundLayerMask);
 
-    private void RetrieveFriction(Collider2D hitCollider)
-    {
-        if (hitCollider == null)
+        for (int i = 0; i < hitCount; i++)
         {
-            Friction = 0f;
-            return;
+            RaycastHit2D hit = groundHits[i];
+            if (hit.collider == null)
+                continue;
+
+            Vector2 normal = hit.normal;
+
+            if (normal.y >= groundNormalMinY)
+            {
+                foundGround = true;
+
+                if (normal.y > bestNormalY)
+                {
+                    bestNormalY = normal.y;
+                    bestNormal = normal;
+
+                    PhysicsMaterial2D mat = hit.collider.sharedMaterial;
+                    bestFriction = mat != null ? mat.friction : 0f;
+                }
+            }
+
+            if (Mathf.Abs(normal.x) >= wallNormalMinX)
+            {
+                foundWall = true;
+            }
         }
-
-        PhysicsMaterial2D mat = hitCollider.sharedMaterial;
-        Friction = mat != null ? mat.friction : 0f;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        EvaluateTrigger(other, true);
-    }
+    private void CheckLadder()
+{
+    ContactFilter2D filter = new ContactFilter2D();
+    filter.useLayerMask = true;
+    filter.layerMask = ladderLayerMask;
+    filter.useTriggers = true;
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        EvaluateTrigger(other, true);
-    }
+    int count = col.Overlap(filter, ladderResults);
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        EvaluateTrigger(other, false);
-    }
-
-    private void EvaluateTrigger(Collider2D other, bool withContact)
-    {
-        if (!other.CompareTag(ladderTag))
-            return;
-
-        OnLadder = withContact;
-        CurrentLadder = withContact ? other : null;
-    }
+    OnLadder = count > 0;
+    CurrentLadder = OnLadder ? ladderResults[0] : null;
+}
 
     private void OnDrawGizmosSelected()
     {
@@ -176,10 +198,18 @@ public class GroundDetector : MonoBehaviour
         if (c == null) return;
 
         Bounds b = c.bounds;
-        Vector2 origin = new Vector2(b.center.x, b.min.y + 0.02f);
+
+        Vector2 originLeft = new Vector2(b.min.x + 0.05f, b.min.y + 0.02f);
+        Vector2 originCenter = new Vector2(b.center.x, b.min.y + 0.02f);
+        Vector2 originRight = new Vector2(b.max.x - 0.05f, b.min.y + 0.02f);
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(origin, origin + Vector2.down * groundCheckDistance);
-        Gizmos.DrawSphere(origin, 0.02f);
+        Gizmos.DrawLine(originLeft, originLeft + Vector2.down * groundCheckDistance);
+        Gizmos.DrawLine(originCenter, originCenter + Vector2.down * groundCheckDistance);
+        Gizmos.DrawLine(originRight, originRight + Vector2.down * groundCheckDistance);
+
+        Gizmos.DrawSphere(originLeft, 0.02f);
+        Gizmos.DrawSphere(originCenter, 0.02f);
+        Gizmos.DrawSphere(originRight, 0.02f);
     }
 }
