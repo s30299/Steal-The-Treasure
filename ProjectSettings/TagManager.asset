@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ladder
   - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - UI
   - Ground
   - Ladder
-  - 
-  - 
+  - Enemy
+  - Player
   - 
   - 
   - 
