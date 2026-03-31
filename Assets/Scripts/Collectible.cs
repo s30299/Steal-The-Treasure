@@ -2,42 +2,48 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    [Header("UI/Debug")]
-    [SerializeField] private string _itemName = "Item";
+    [Header("Info")]
+    [SerializeField] private string itemName = "Item";
 
     [Header("Progress")]
-    [SerializeField] private PlayerProgress _progress;
+    [SerializeField] private PlayerProgress progress;
 
-    [Header("What skill to level up")]
-    [SerializeField] private DashSkillDefinition _dashDefinition;
-
-    [SerializeField] private int _levelGain = 1;
-    [SerializeField] private int _maxLevel = 999;
+    [Header("Skill")]
+    [SerializeField] private SkillDefinition skillDefinition;
+    [SerializeField] private int levelGain = 1;
+    [SerializeField] private int maxLevel = 999;
 
     public void Collect()
     {
-        if (_progress == null || _dashDefinition == null)
+        if (progress == null)
         {
-            Debug.LogWarning($"Collectible '{name}': Missing references (_progress / _dashDefinition).");
+            Debug.LogWarning($"Collectible '{name}' has no PlayerProgress assigned.");
             return;
         }
 
-        var state = _progress.skills.Find(s => s != null && s.skillDefinition == _dashDefinition);
+        if (skillDefinition == null)
+        {
+            Debug.LogWarning($"Collectible '{name}' has no SkillDefinition assigned.");
+            return;
+        }
+
+        SkillState state = progress.skills.Find(s => s != null && s.skillDefinition == skillDefinition);
 
         if (state == null)
         {
             state = new SkillState
             {
-                skillDefinition = _dashDefinition,
+                skillDefinition = skillDefinition,
                 currentLevel = 1
             };
-            _progress.skills.Add(state);
+
+            progress.skills.Add(state);
         }
 
-        int before = state.currentLevel;
-        state.currentLevel = Mathf.Clamp(state.currentLevel + _levelGain, 1, _maxLevel);
+        int oldLevel = state.currentLevel;
+        state.currentLevel = Mathf.Clamp(state.currentLevel + levelGain, 1, maxLevel);
 
-        Debug.Log($"Interaction: Collected {_itemName} | Dash lvl {before} -> {state.currentLevel}");
+        Debug.Log($"Collected: {itemName} | {skillDefinition.name}: {oldLevel} -> {state.currentLevel}");
 
         Destroy(gameObject);
     }
