@@ -29,6 +29,8 @@ public class Dash : Capability
     private Coroutine _IFramesRoutine;
     private Health _health;
 
+    private Animator _animator;
+
     public int CurrentDashes => _currentDashes;
     public int MaxDashes => _maxDashes;
 
@@ -52,6 +54,7 @@ public class Dash : Capability
             _progress.skills.Add(_skillState);
         }
         _currentDashes = _maxDashes;
+        _animator = GetComponent<Animator>();
     }
     protected override void Update()
     {
@@ -82,6 +85,7 @@ public class Dash : Capability
         _rechargeRoutine ??= StartCoroutine(RechargeDash());
 
         _dashDirection = Controller.LastHorizontalFacing;
+        _animator.SetTrigger("Dashed");
 
         float elapsed = 0f;
         OnDash?.Invoke();

@@ -31,9 +31,11 @@ public class Jump : Capability
 
     public Action OnJumped;
 
+    private Animator _animator;
     protected override void Awake()
     {
         base.Awake();
+        _animator=GetComponent<Animator>();
 
         _isJumpReset = true;
         _defaultGravityScale = Controller.Rigidbody2D.gravityScale;
@@ -169,10 +171,12 @@ public class Jump : Capability
         if (groundedJump)
         {
             _jumpPhase = 0;
+            _animator.SetTrigger("StartJump");
         }
         else if (!_forceJumpNow)
         {
             _jumpPhase++;
+            _animator.SetTrigger("StartJump");
         }
 
         _jumpBufferCounter = 0f;
@@ -187,6 +191,7 @@ public class Jump : Capability
         }
         else if (_velocity.y < -_verticalVelocityEpsilon)
         {
+            _animator.SetTrigger("JumpTopReached");
             _jumpSpeed += Mathf.Abs(_velocity.y);
         }
 

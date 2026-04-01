@@ -7,10 +7,11 @@ public class LevelManager : MonoSingleton<LevelManager>
     [SerializeField] public SceneAsset mainMenu;
     public void Start()
     {
-        if (PlayerPrefs.HasKey("posX"))
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if (PlayerPrefs.HasKey("posX")&& player!=null)
         {
-            GameObject.FindGameObjectWithTag("Player").
-                transform.SetPositionAndRotation(new(PlayerPrefs.GetFloat("posX"), PlayerPrefs.GetFloat("posY"), 0),
+            player.transform.SetPositionAndRotation(new(PlayerPrefs.GetFloat("posX"),
+                PlayerPrefs.GetFloat("posY"), 0),
                 Quaternion.identity);
         }
     }
