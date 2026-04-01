@@ -24,4 +24,9 @@ public class InputManager : MonoSingleton<InputManager>
     public static InputAction ActionAttack => InputActions.Player.Attack;
     public static InputAction ActionDash => InputActions.Player.Dash;
     public static InputAction ActionPause => InputActions.UI.Pause;
+
+    public static string GetInteractButton()
+    {
+        return "E";
+    }
 }

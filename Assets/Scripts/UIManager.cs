@@ -1,3 +1,5 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -11,9 +13,13 @@ public class UIManager : MonoSingleton<UIManager>
     [SerializeField] private GameObject pauseMenuUI;
     private Canvas pauseMenuCanvas;
     [SerializeField] private GameObject pauseFirstButton;
+    [SerializeField] private GameObject HUDUI;
+    private static TextMeshProUGUI HUDTooltip;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
+        HUDTooltip = GameObject.Find("ToolTip (TMP)").GetComponent<TextMeshProUGUI>();
+        HUDTooltip.enabled = false;
         gameOverCanvas = gameOverUI.GetComponent<Canvas>();
         pauseMenuCanvas = pauseMenuUI.GetComponent<Canvas>();
         //GameObject.Find("VolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume", 1);
@@ -61,5 +67,14 @@ public class UIManager : MonoSingleton<UIManager>
     public void QuitGame()
     {
         Application.Quit();
+    }
+    public static void ShowTooltip(string text)
+    {
+        HUDTooltip.GetComponent<TextMeshProUGUI>().text = text;
+        HUDTooltip.enabled = true;
+    }
+    public static void HideTooltip()
+    {
+        HUDTooltip.enabled = false;
     }
 }
