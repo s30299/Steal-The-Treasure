@@ -1,8 +1,8 @@
 # Steal-The-Treasure
 Unity 2d platform game
 ## Controls
-![Controller Layout](\Assets\Images\ControllerLayout.png)
-![Keyboard Layout](\Assets\Images\KeyboardLayout.png)
+![Controller Layout](Assets/Images/ControllerLayout.png)
+![Keyboard Layout](Assets\Images\KeyboardLayout.png)
 ## Credits
 ### Sprites
 - **Main Character** [Hero Knight - Pixel Art](https://assetstore.unity.com/packages/2d/characters/hero-knight-pixel-art-165188) by Sven Thole
