@@ -2,7 +2,7 @@
 - Project name: Steal-The-Treasure
 - Unity version: Unity 6000.4.0f1
 - Active game object:
-  - Name: LevelChangeDoor (1)
+  - Name: Fireball
   - Tag: Untagged
-  - Layer: Default
+  - Layer: projectile
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

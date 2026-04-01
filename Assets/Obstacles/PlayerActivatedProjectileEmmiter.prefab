@@ -108,7 +108,7 @@ MonoBehaviour:
   type: 1
   direction: 2
   projectileDirection: {x: 0, y: 0}
-  projectile: {fileID: 7028295446581191902, guid: b5dac6bfa55d90240b5de6b60b6cb09d, type: 3}
+  projectile: {fileID: 2722720609612914400, guid: 3adb4a438c654724cadab005982fbe1c, type: 3}
   projectileSpeed: 15
   shootDelay: 0
 --- !u!61 &3249431030692315556

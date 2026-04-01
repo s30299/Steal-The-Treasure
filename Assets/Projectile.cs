@@ -12,7 +12,8 @@ public class Projectile : MonoBehaviour
     public void SetDirection(Vector2 direction,bool flip=false)
     {
         this.direction = direction.normalized;
-        GetComponent<SpriteRenderer>().flipX = flip;
+        //GetComponent<SpriteRenderer>().flipX = flip;
+        transform.Rotate(new(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg));
         audioSource=GetComponent<AudioSource>();
         if (audioSource != null)
         {
@@ -21,7 +22,7 @@ public class Projectile : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        transform.Translate(speed * Time.fixedDeltaTime * direction);
+        transform.Translate(speed * Time.fixedDeltaTime * Vector2.right);
         distanceTravelled += speed * Time.fixedDeltaTime;
         if(distanceTravelled > despawnRange)
         {
