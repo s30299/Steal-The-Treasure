@@ -63,7 +63,7 @@ public class Jump : Capability
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-
+        
         if (IsLocked)
             return;
 
@@ -91,6 +91,7 @@ public class Jump : Capability
         SetGravity();
 
         Controller.Rigidbody2D.linearVelocity = _velocity;
+        _animator.SetBool("IsFalling", Controller.Rigidbody2D.linearVelocityY < 0);
     }
 
     private void RegisterInput()
