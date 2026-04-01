@@ -1,5 +1,4 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -15,6 +14,7 @@ public class UIManager : MonoSingleton<UIManager>
     [SerializeField] private GameObject pauseFirstButton;
     [SerializeField] private GameObject HUDUI;
     private static TextMeshProUGUI HUDTooltip;
+    [SerializeField] private bool isInMainMenu = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
@@ -38,7 +38,7 @@ public class UIManager : MonoSingleton<UIManager>
     {
         Time.timeScale = 1.0f;
         DisableGameOverUI();
-        FindAnyObjectByType<InputManager>().DisableInput();
+        InputManager.DisableInput();
         var sceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneName);
     }
@@ -58,7 +58,7 @@ public class UIManager : MonoSingleton<UIManager>
     }
     public void SwitchPause()
     {
-        if (!gameOverCanvas.enabled)
+        if (!gameOverCanvas.enabled && !isInMainMenu)
         {
             if (pauseMenuCanvas.enabled){Unpause();}
             else{Pause();}

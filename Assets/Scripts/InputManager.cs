@@ -9,12 +9,12 @@ public class InputManager : MonoSingleton<InputManager>
     protected override void Awake()
        => EnableInput();
 
-    private void EnableInput()
+    private static void EnableInput()
     {
         InputActions = new();
         InputActions.Enable();
     }
-    public void DisableInput()
+    public static void DisableInput()
     {
         InputActions.Disable();
     }

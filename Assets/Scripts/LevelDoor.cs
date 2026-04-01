@@ -26,7 +26,7 @@ public class LevelDoor : MonoBehaviour
                     PlayerPrefs.DeleteKey("posY");
                     PlayerPrefs.Save();
                 }
-                FindAnyObjectByType<InputManager>().DisableInput();
+                InputManager.DisableInput();
                 LevelManager.ChangeLevel(nextLevel.name);
             }
         }
