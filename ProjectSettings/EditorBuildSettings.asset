@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Treasury.unity
+    guid: 39dd8d902626e454d94f2e35c3305f06
+  - enabled: 1
     path: Assets/Scenes/EnemyTestingScene.unity
     guid: 1b7180e0c05e10a48bebf425078cccec
   - enabled: 1
@@ -14,5 +17,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: b16dd02d1b18b407d89a4d75fe9f069e
+  - enabled: 1
+    path: Assets/Scenes/Tower.unity
+    guid: 6d656467e7a836e4cb5d2ee62032d50b
+  - enabled: 1
+    path: Assets/Scenes/Castle.unity
+    guid: 4023a6c15cb666b41b115c7c8fc19ec2
+  - enabled: 1
+    path: Assets/Scenes/Caves.unity
+    guid: 89b024052335acb43807d8817272869e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
