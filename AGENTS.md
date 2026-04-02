@@ -2,7 +2,7 @@
 - Project name: Steal-The-Treasure
 - Unity version: Unity 6000.4.0f1
 - Active game object:
-  - Name: Tilemap Ladder
+  - Name: CheckPoint
   - Tag: Untagged
-  - Layer: Ladder
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
