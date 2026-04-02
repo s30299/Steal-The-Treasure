@@ -265,8 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e6969a07e0431479cd97364d1c9e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Move
-  <MaxSpeed>k__BackingField: 6.8
-  _maxAcceleration: 53.2
+  <MaxSpeed>k__BackingField: 7.9
+  _maxAcceleration: 55.8
   _maxAirAcceleration: 20
 --- !u!114 &5338329239368329111
 MonoBehaviour:

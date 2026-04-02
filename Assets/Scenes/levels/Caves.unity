@@ -3630,11 +3630,11 @@ PrefabInstance:
       objectReference: {fileID: 102900000, guid: 39dd8d902626e454d94f2e35c3305f06, type: 3}
     - target: {fileID: 6369440916226300670, guid: 7f044eb9be5674a4288d6dc5c32c9cd3, type: 3}
       propertyPath: exitCoords.x
-      value: -3.5
+      value: 136
       objectReference: {fileID: 0}
     - target: {fileID: 6369440916226300670, guid: 7f044eb9be5674a4288d6dc5c32c9cd3, type: 3}
       propertyPath: exitCoords.y
-      value: 1
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6369440916226300670, guid: 7f044eb9be5674a4288d6dc5c32c9cd3, type: 3}
       propertyPath: useExitCoords
