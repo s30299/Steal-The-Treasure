@@ -30,7 +30,7 @@ public class LevelManager : MonoSingleton<LevelManager>
         }
         else
         {
-            playerProgress.skills[1].currentLevel = 1;
+            playerProgress.skills[1].currentLevel = 0;
         }
 
         if (PlayerPrefs.HasKey("doubleJumpCollected"))
