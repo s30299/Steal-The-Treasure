@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class LevelDoor : MonoBehaviour
 {
-    [SerializeField] private SceneAsset nextLevel;
+    //[SerializeField] private SceneAsset nextLevel;
     [SerializeField] private Vector2 exitCoords;
     [SerializeField] private bool useExitCoords = false;
+    [SerializeField] private string nextLevel;
     private PlayerController playerController;
     private bool inputActive=false;
     public void Update()
@@ -27,7 +28,7 @@ public class LevelDoor : MonoBehaviour
                     PlayerPrefs.Save();
                 }
                 InputManager.DisableInput();
-                LevelManager.ChangeLevel(nextLevel.name);
+                LevelManager.ChangeLevel(nextLevel);
             }
         }
     }
@@ -36,7 +37,7 @@ public class LevelDoor : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inputActive = true;
-            UIManager.ShowTooltip("Press interact to move to " + nextLevel.name);
+            UIManager.ShowTooltip("Press interact to move to " + nextLevel);
             if (playerController == null)
             {
                 playerController=collision.gameObject.GetComponent<PlayerController>();

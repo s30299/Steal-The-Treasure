@@ -1,11 +1,10 @@
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelManager : MonoSingleton<LevelManager>
 {
-    [SerializeField] public SceneAsset firstLevel;
-    [SerializeField] public SceneAsset mainMenu;
-    [SerializeField] public PlayerProgress playerProgress;
+    //[SerializeField] private SceneAsset firstLevel;
+    //[SerializeField] private SceneAsset mainMenu;
+    [SerializeField] private PlayerProgress playerProgress;
     public void Start()
     {
         var player = GameObject.FindGameObjectWithTag("Player");
@@ -59,7 +58,7 @@ public class LevelManager : MonoSingleton<LevelManager>
         PlayerPrefs.DeleteKey("dashCollected");
         PlayerPrefs.DeleteKey("doubleJumpCollected");
         PlayerPrefs.Save();
-        ChangeLevel(firstLevel.name);
+        ChangeLevel("Treasury");
     }
     public static bool hasSavedLevel()
     {
@@ -78,6 +77,6 @@ public class LevelManager : MonoSingleton<LevelManager>
     public void GoToMainMenu()
     {
         InputManager.DisableInput();
-        SceneManager.LoadScene(mainMenu.name);
+        SceneManager.LoadScene("MainMenu");
     }
 }
