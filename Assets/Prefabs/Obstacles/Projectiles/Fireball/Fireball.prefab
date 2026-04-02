@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   speed: 10
+  despawnRange: 50
   impactSound: {fileID: 8300000, guid: 1bb86e270e7bfa64986ca47564840165, type: 3}
 --- !u!58 &2910130356897636828
 CircleCollider2D:
@@ -182,7 +183,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
