@@ -8,7 +8,7 @@
   - Layers:
     - Default, TransparentFX, Ignore Raycast, projectile, Water, UI, Ground, Ladder, Enemy, Player, Interactable
 - Active game object:
-  - Name: RepeatingProjectileEmmiter (12)
-  - Tag: Untagged
-  - Layer: Default
+  - Name: RangedEnemy (5)
+  - Tag: Enemy
+  - Layer: Enemy
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
