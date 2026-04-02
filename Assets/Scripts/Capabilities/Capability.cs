@@ -5,7 +5,7 @@ public abstract class Capability : MonoBehaviour
 {
     protected Controller _controller;
     public Controller Controller { get { return _controller; } }
-    public bool IsLocked { get; private set; }
+    public bool IsLocked { get;  set; }
 
     protected virtual void Awake() => _controller = GetComponent<Controller>();
     protected virtual void Start() { }

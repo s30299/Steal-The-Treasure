@@ -49,7 +49,7 @@ public class Dash : Capability
             _skillState = new SkillState
             {
                 skillDefinition = _definition,
-                currentLevel = 1
+                currentLevel = 0
             };
             _progress.skills.Add(_skillState);
         }
@@ -59,8 +59,15 @@ public class Dash : Capability
     protected override void Update()
     {
         base.Update();
-
-        Vector2 move = controller.RetrieveMoveInput();
+        if (_skillState.currentLevel == 0)
+        {
+            IsLocked=true;
+        }
+        else
+        {
+            IsLocked = false;
+        }
+            Vector2 move = controller.RetrieveMoveInput();
         if (Mathf.Abs(move.x) > _inputDeadzone)
             controller.LastHorizontalFacing = Vector2.right * Mathf.Sign(move.x);
 
