@@ -10,12 +10,16 @@ public class AudioManager : MonoSingleton<AudioManager>
     private static PlayerState playerState=PlayerState.None;
     private PlayerController playerController;
     private double lastPlayedLandingSound = 0;
+    private GameObject player;
     void Start()
     {
-        var player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         musicSource = GetComponent<AudioSource>();
-        playerAudioSource = player.GetComponent<AudioSource>();
-        playerController=player.GetComponent<PlayerController>();
+        if (player != null)
+        {
+            playerAudioSource = player.GetComponent<AudioSource>();
+            playerController = player.GetComponent<PlayerController>();
+        }
         SetMusicVolume(PlayerPrefs.GetFloat("musicVolume",1));
         SetEffectsVolume(PlayerPrefs.GetFloat("effectsVolume", 1));
     }
@@ -33,8 +37,10 @@ public class AudioManager : MonoSingleton<AudioManager>
 
     private void Update()
     {
-        PlayerAudio();
-
+        if (player != null)
+        {
+            PlayerAudio();
+        }
     }
     private void PlayerAudio()
     {

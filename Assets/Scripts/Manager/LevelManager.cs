@@ -14,6 +14,12 @@ public class LevelManager : MonoSingleton<LevelManager>
                 PlayerPrefs.GetFloat("posY"), 0),
                 Quaternion.identity);
         }
+        else if(player != null)
+        {
+            PlayerPrefs.SetFloat("posY",player.transform.position.y);
+            PlayerPrefs.SetFloat("posX", player.transform.position.x);
+            PlayerPrefs.Save();
+        }
     }
     public static void ChangeLevel(string levelName)
     {
@@ -25,6 +31,9 @@ public class LevelManager : MonoSingleton<LevelManager>
 
     public void LoadFirstLevel()
     {
+        PlayerPrefs.DeleteKey("posX");
+        PlayerPrefs.DeleteKey("posY");
+        PlayerPrefs.Save();
         ChangeLevel(firstLevel.name);
     }
     public static bool hasSavedLevel()
