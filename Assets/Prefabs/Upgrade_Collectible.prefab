@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8891304407252360674}
   - component: {fileID: 6312819585075038358}
   - component: {fileID: 1885307181953212686}
+  - component: {fileID: 1298132822892907579}
   m_Layer: 10
   m_Name: Upgrade_Collectible
   m_TagString: Ground
@@ -146,3 +147,17 @@ MonoBehaviour:
   skillDefinition: {fileID: 11400000, guid: 71281e65bf00c284988df88fef57237e, type: 2}
   levelGain: 1
   maxLevel: 999
+--- !u!114 &1298132822892907579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353478099552207717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6668d3c13cfc64592b2c624de1dec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shine
+  changeSpeed: 0.15
+  minChange: 0.7

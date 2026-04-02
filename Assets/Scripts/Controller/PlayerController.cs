@@ -3,6 +3,11 @@ using UnityEngine;
 public class PlayerController : Controller
 {
     private double lastOnDeathReceived=0;
+
+    public AudioClip dashSound;
+    public AudioClip JumpSound;
+    public AudioClip walkSound;
+
     private UIManager ui;
     public void Start()
     {
