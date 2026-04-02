@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 5126087380671208694}
   - component: {fileID: 7377622963827133728}
   - component: {fileID: 1548699528782173821}
-  m_Layer: 0
+  - component: {fileID: -8453262151656784984}
+  m_Layer: 8
   m_Name: FastEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -302,3 +303,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-8453262151656784984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268687265962554249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dce427e39099cc44b46af1ad0317f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  maxHealth: 1

@@ -35,6 +35,11 @@ public class Health : MonoBehaviour, IDamageable
 
     protected virtual void Die(GameObject attacker = null)
     {
+        if(attacker != null && attacker.gameObject.name == "Player")
+        {
+            Destroy(gameObject);
+            return;
+        }
         playerController.OnDeath();
     }
 }
