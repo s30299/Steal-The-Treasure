@@ -1,6 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
+public enum MovementDirection
+{
+    Left, Right, Standing
+}
 public abstract class Controller : MonoBehaviour, IInputRetriever
 {
     [field: Header("Base Controller")]
@@ -11,6 +15,8 @@ public abstract class Controller : MonoBehaviour, IInputRetriever
     public Vector2 LastHorizontalFacing { get; set; } = Vector2.right;
     private int _inputLockCount;
     public bool InputLocked => _inputLockCount > 0;
+    private static MovementDirection movementDirection=MovementDirection.Standing;
+    
     public void LockInputsFor(float seconds)
     {
         if (seconds <= 0f)
@@ -44,4 +50,10 @@ public abstract class Controller : MonoBehaviour, IInputRetriever
     public abstract bool RetrieveInteractInput();
     public abstract bool RetrieveAttackInput();
     public abstract bool RetrieveDashInput();
+
+    public static void MovingLeft(){movementDirection = MovementDirection.Left;}
+    public static void MovingRight() {movementDirection = MovementDirection.Right;}
+    public static void StandingStill(){movementDirection=MovementDirection.Standing;}
+
+    public static MovementDirection GetMoveDirection(){return movementDirection;}
 }

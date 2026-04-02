@@ -13,7 +13,7 @@ public class CameraFlow : MonoBehaviour
 
     [Header("Offset")]
     [SerializeField] private Vector3 offset = new(0f, 1.5f, -10f);
-
+    [SerializeField] private float sideOffset=2f;
     private Vector3 velocity = Vector3.zero;
     private void Start()
     {
@@ -24,6 +24,12 @@ public class CameraFlow : MonoBehaviour
     private void LateUpdate()
     {
         if (target == null) return;
+        switch (Controller.GetMoveDirection())
+        {
+            case MovementDirection.Left:offset.x=-sideOffset; break;
+            case MovementDirection.Right:offset.x=sideOffset; break;
+            case MovementDirection.Standing:offset.x=0; break;
+        }
 
         Vector3 desiredPosition = target.position + offset;
 
