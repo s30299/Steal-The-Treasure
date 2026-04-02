@@ -2,7 +2,7 @@
 - Project name: Steal-The-Treasure
 - Unity version: Unity 6000.4.0f1
 - Active game object:
-  - Name: Dash_Collectible
-  - Tag: Ground
-  - Layer: Interactable
+  - Name: KillBox (1)
+  - Tag: Untagged
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
