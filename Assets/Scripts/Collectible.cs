@@ -44,7 +44,16 @@ public class Collectible : MonoBehaviour
         state.currentLevel = Mathf.Clamp(state.currentLevel + levelGain, 1, maxLevel);
 
         Debug.Log($"Collected: {itemName} | {skillDefinition.name}: {oldLevel} -> {state.currentLevel}");
-
-        Destroy(gameObject);
+        if (skillDefinition.id == "dash")
+        {
+            PlayerPrefs.SetInt("dashCollected", 1);
+            PlayerPrefs.Save();
+        }
+        else if (skillDefinition.id == "jump")
+        {
+            PlayerPrefs.SetInt("doubleJumpCollected", 1);
+            PlayerPrefs.Save();
+        }
+            Destroy(gameObject);
     }
 }

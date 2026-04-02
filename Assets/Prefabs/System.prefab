@@ -1986,6 +1986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   firstLevel: {fileID: 102900000, guid: 39dd8d902626e454d94f2e35c3305f06, type: 3}
   mainMenu: {fileID: 102900000, guid: 4f9faa478e5107c47becb495090a4644, type: 3}
+  playerProgress: {fileID: 11400000, guid: ef48699030b726c4d895a627d89cf013, type: 2}
 --- !u!1 &3637129167731776589
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ public class LevelManager : MonoSingleton<LevelManager>
 {
     [SerializeField] public SceneAsset firstLevel;
     [SerializeField] public SceneAsset mainMenu;
+    [SerializeField] public PlayerProgress playerProgress;
     public void Start()
     {
         var player = GameObject.FindGameObjectWithTag("Player");
@@ -20,6 +21,17 @@ public class LevelManager : MonoSingleton<LevelManager>
             PlayerPrefs.SetFloat("posX", player.transform.position.x);
             PlayerPrefs.Save();
         }
+
+        if (PlayerPrefs.HasKey("dashCollected"))
+        {
+            var collectible = GameObject.Find("Dash_Collectible");
+            if (collectible != null) { Destroy(collectible); }
+            playerProgress.skills[1].currentLevel = 1;
+        }
+        else
+        {
+            playerProgress.skills[1].currentLevel = 0;
+        }
     }
     public static void ChangeLevel(string levelName)
     {
@@ -33,6 +45,8 @@ public class LevelManager : MonoSingleton<LevelManager>
     {
         PlayerPrefs.DeleteKey("posX");
         PlayerPrefs.DeleteKey("posY");
+        PlayerPrefs.DeleteKey("dashCollected");
+        PlayerPrefs.DeleteKey("doubleJumpCollected");
         PlayerPrefs.Save();
         ChangeLevel(firstLevel.name);
     }

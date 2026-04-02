@@ -160,4 +160,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shine
   changeSpeed: 0.15
-  minChange: 0.7
+  minChange: 0.95
