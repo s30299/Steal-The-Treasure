@@ -2,7 +2,7 @@
 - Project name: Steal-The-Treasure
 - Unity version: Unity 6000.4.0f1
 - Active game object:
-  - Name: GameOver (TMP)
-  - Tag: Untagged
-  - Layer: Default
+  - Name: Dash_Collectible
+  - Tag: Ground
+  - Layer: Interactable
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
