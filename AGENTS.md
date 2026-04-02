@@ -8,7 +8,7 @@
   - Layers:
     - Default, TransparentFX, Ignore Raycast, projectile, Water, UI, Ground, Ladder, Enemy, Player, Interactable
 - Active game object:
-  - Name: RangedEnemy (5)
-  - Tag: Enemy
-  - Layer: Enemy
+  - Name: Tilemap
+  - Tag: Ground
+  - Layer: Ground
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
