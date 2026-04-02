@@ -8,7 +8,7 @@
   - Layers:
     - Default, TransparentFX, Ignore Raycast, projectile, Water, UI, Ground, Ladder, Enemy, Player, Interactable
 - Active game object:
-  - Name: Button
+  - Name: CodeLock
   - Tag: Untagged
-  - Layer: UI
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
