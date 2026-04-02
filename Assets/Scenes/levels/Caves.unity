@@ -1259,7 +1259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7789522438298966372, guid: 1b41e6951fdf3bd40925b052dc740beb, type: 3}
       propertyPath: projectileRange
-      value: 60
+      value: 55.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
