@@ -50,6 +50,8 @@ public abstract class Controller : MonoBehaviour, IInputRetriever
     public abstract bool RetrieveInteractInput();
     public abstract bool RetrieveAttackInput();
     public abstract bool RetrieveDashInput();
+    public abstract bool RetrieveLeftMouseInput();
+    public abstract bool RetrieveRightMouseInput();
 
     public static void MovingLeft(){movementDirection = MovementDirection.Left;}
     public static void MovingRight() {movementDirection = MovementDirection.Right;}

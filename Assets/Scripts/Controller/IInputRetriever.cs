@@ -7,4 +7,6 @@ public interface IInputRetriever
     bool RetrieveInteractInput();
     bool RetrieveAttackInput();
     bool RetrieveDashInput();
+    bool RetrieveLeftMouseInput();
+    bool RetrieveRightMouseInput();
 }
