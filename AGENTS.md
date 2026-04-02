@@ -2,7 +2,7 @@
 - Project name: Steal-The-Treasure
 - Unity version: Unity 6000.4.0f1
 - Active game object:
-  - Name: Player
-  - Tag: Player
-  - Layer: Player
+  - Name: Upgrade_Collectible
+  - Tag: Ground
+  - Layer: Interactable
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

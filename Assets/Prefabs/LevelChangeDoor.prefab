@@ -79,7 +79,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.48235294, g: 0.28627452, b: 0.15294118, a: 1}
@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 659465402131006891}
   - component: {fileID: 3415504619246084321}
   - component: {fileID: 6369440916226300670}
+  - component: {fileID: 557689526202075715}
   m_Layer: 0
   m_Name: LevelChangeDoor
   m_TagString: Untagged
@@ -246,3 +247,17 @@ MonoBehaviour:
   nextLevel: {fileID: 0}
   exitCoords: {x: 0, y: 0}
   useExitCoords: 0
+--- !u!114 &557689526202075715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8425031120999340540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6668d3c13cfc64592b2c624de1dec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shine
+  changeSpeed: 0.15
+  minChange: 0.7
