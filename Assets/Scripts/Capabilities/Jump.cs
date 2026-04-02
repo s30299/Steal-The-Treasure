@@ -31,9 +31,13 @@ public class Jump : Capability
 
     public Action OnJumped;
 
+    private Animator _animator;
+
     protected override void Awake()
     {
         base.Awake();
+
+        _animator=GetComponent<Animator>();
 
         _isJumpReset = true;
         _defaultGravityScale = Controller.Rigidbody2D.gravityScale;
@@ -61,7 +65,7 @@ public class Jump : Capability
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-
+        
         if (IsLocked)
             return;
 
@@ -89,6 +93,7 @@ public class Jump : Capability
         SetGravity();
 
         Controller.Rigidbody2D.linearVelocity = _velocity;
+        _animator.SetBool("IsFalling", Controller.Rigidbody2D.linearVelocityY < 0);
     }
 
     private void RegisterInput()
@@ -169,10 +174,14 @@ public class Jump : Capability
         if (groundedJump)
         {
             _jumpPhase = 0;
+            _animator.SetTrigger("StartJump");
+            AudioManager.PlayerJumped();
         }
         else if (!_forceJumpNow)
         {
             _jumpPhase++;
+            _animator.SetTrigger("StartJump");
+            AudioManager.PlayerJumped();
         }
 
         _jumpBufferCounter = 0f;

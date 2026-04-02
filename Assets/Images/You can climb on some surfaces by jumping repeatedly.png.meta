@@ -1,0 +1,1092 @@
+fileFormatVersion: 2
+guid: dadc308d296438d49aa0ccb9ffc2807e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -268366933168991350
+    second: You can climb on some surfaces by jumping repeatedly_0
+  - first:
+      213: 146971617347057432
+    second: You can climb on some surfaces by jumping repeatedly_1
+  - first:
+      213: 8293047733448205461
+    second: You can climb on some surfaces by jumping repeatedly_2
+  - first:
+      213: 7716971173895844607
+    second: You can climb on some surfaces by jumping repeatedly_3
+  - first:
+      213: -5296484883489425337
+    second: You can climb on some surfaces by jumping repeatedly_4
+  - first:
+      213: 6640807726950880591
+    second: You can climb on some surfaces by jumping repeatedly_5
+  - first:
+      213: -7732783866781988963
+    second: You can climb on some surfaces by jumping repeatedly_6
+  - first:
+      213: -6547795600678426788
+    second: You can climb on some surfaces by jumping repeatedly_7
+  - first:
+      213: -5962195697863321528
+    second: You can climb on some surfaces by jumping repeatedly_8
+  - first:
+      213: 1996608827139550528
+    second: You can climb on some surfaces by jumping repeatedly_9
+  - first:
+      213: 8684570637530509532
+    second: You can climb on some surfaces by jumping repeatedly_10
+  - first:
+      213: 3423306791005352569
+    second: You can climb on some surfaces by jumping repeatedly_11
+  - first:
+      213: 569799733109268628
+    second: You can climb on some surfaces by jumping repeatedly_12
+  - first:
+      213: -2745658639753675326
+    second: You can climb on some surfaces by jumping repeatedly_13
+  - first:
+      213: -6110993725728802862
+    second: You can climb on some surfaces by jumping repeatedly_14
+  - first:
+      213: 1296550780432378084
+    second: You can climb on some surfaces by jumping repeatedly_15
+  - first:
+      213: 4838519633955149268
+    second: You can climb on some surfaces by jumping repeatedly_16
+  - first:
+      213: 5280816463060835682
+    second: You can climb on some surfaces by jumping repeatedly_17
+  - first:
+      213: -6398632557870277423
+    second: You can climb on some surfaces by jumping repeatedly_18
+  - first:
+      213: -1016597118418651335
+    second: You can climb on some surfaces by jumping repeatedly_19
+  - first:
+      213: -8813459511005197909
+    second: You can climb on some surfaces by jumping repeatedly_20
+  - first:
+      213: 3812516648358336810
+    second: You can climb on some surfaces by jumping repeatedly_21
+  - first:
+      213: 4997008500117068136
+    second: You can climb on some surfaces by jumping repeatedly_22
+  - first:
+      213: -313713246910185704
+    second: You can climb on some surfaces by jumping repeatedly_23
+  - first:
+      213: 4029251457755307140
+    second: You can climb on some surfaces by jumping repeatedly_24
+  - first:
+      213: -4118885989465931100
+    second: You can climb on some surfaces by jumping repeatedly_25
+  - first:
+      213: -8581626839139978947
+    second: You can climb on some surfaces by jumping repeatedly_26
+  - first:
+      213: 9149507128177798041
+    second: You can climb on some surfaces by jumping repeatedly_27
+  - first:
+      213: 5677484174038994102
+    second: You can climb on some surfaces by jumping repeatedly_28
+  - first:
+      213: -3849572598843126931
+    second: You can climb on some surfaces by jumping repeatedly_29
+  - first:
+      213: 6846558219795965649
+    second: You can climb on some surfaces by jumping repeatedly_30
+  - first:
+      213: 4188962446128597608
+    second: You can climb on some surfaces by jumping repeatedly_31
+  - first:
+      213: -7558786605840059261
+    second: You can climb on some surfaces by jumping repeatedly_32
+  - first:
+      213: 7638153381901162012
+    second: You can climb on some surfaces by jumping repeatedly_33
+  - first:
+      213: -86109439558437318
+    second: You can climb on some surfaces by jumping repeatedly_34
+  - first:
+      213: 8182300167669230754
+    second: You can climb on some surfaces by jumping repeatedly_35
+  - first:
+      213: -6153229907406469356
+    second: You can climb on some surfaces by jumping repeatedly_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83500732b1964cf0800000000000000
+      internalID: -268366933168991350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 83
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 817390448e52a0200800000000000000
+      internalID: 146971617347057432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 83
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594e981a9f2d61370800000000000000
+      internalID: 8293047733448205461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 83
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff2bdf97560381b60800000000000000
+      internalID: 7716971173895844607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_4
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 83
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748f2697f0b1f76b0800000000000000
+      internalID: -5296484883489425337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 84
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4593927173e82c50800000000000000
+      internalID: 6640807726950880591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_6
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 83
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d97869f0b02afa490800000000000000
+      internalID: -7732783866781988963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_7
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 84
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5762b7c79e8125a0800000000000000
+      internalID: -6547795600678426788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_8
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 84
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8489e731a96024da0800000000000000
+      internalID: -5962195697863321528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_9
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 84
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04def09562165bb10800000000000000
+      internalID: 1996608827139550528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 83
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd03bc46bfac58870800000000000000
+      internalID: 8684570637530509532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_11
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 83
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9727e039367028f20800000000000000
+      internalID: 3423306791005352569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_12
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 84
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 490271d96d558e700800000000000000
+      internalID: 569799733109268628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_13
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 83
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cdfff6a30675e9d0800000000000000
+      internalID: -2745658639753675326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_14
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 83
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d73b497593613ba0800000000000000
+      internalID: -6110993725728802862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_15
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 84
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e86decb0164ef110800000000000000
+      internalID: 1296550780432378084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_16
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 83
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d556a4b8ffd52340800000000000000
+      internalID: 4838519633955149268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_17
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 44
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d96cc189a394940800000000000000
+      internalID: 5280816463060835682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_18
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 44
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc94eb079d7337a0800000000000000
+      internalID: -6398632557870277423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_19
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 44
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93778f49e4254e1f0800000000000000
+      internalID: -1016597118418651335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_20
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 44
+        width: 55
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba94f3c354d40b580800000000000000
+      internalID: -8813459511005197909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_21
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 38
+        width: 39
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2959ad21b7c8e430800000000000000
+      internalID: 3812516648358336810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_22
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 38
+        width: 11
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869d51d61c0f85540800000000000000
+      internalID: 4997008500117068136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_23
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 44
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f759cc67775abf0800000000000000
+      internalID: -313713246910185704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_24
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 45
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48cda3a5ad6cae730800000000000000
+      internalID: 4029251457755307140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_25
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 38
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2cc8fe307c6d6c0800000000000000
+      internalID: -4118885989465931100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_26
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 45
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d317a127bdfe7e880800000000000000
+      internalID: -8581626839139978947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_27
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 45
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b21f4c14499fe70800000000000000
+      internalID: 9149507128177798041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_28
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 38
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc0f7396c97ace40800000000000000
+      internalID: 5677484174038994102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_29
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 5
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6bc0e40e12939ac0800000000000000
+      internalID: -3849572598843126931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_30
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 0
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d628f02d6cd30f50800000000000000
+      internalID: 6846558219795965649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_31
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 5
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a42f2962f222a30800000000000000
+      internalID: 4188962446128597608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_32
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 5
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3843ce151abc91790800000000000000
+      internalID: -7558786605840059261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_33
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 5
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16da2c380c200a60800000000000000
+      internalID: 7638153381901162012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_34
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 5
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a36bf43cbe31ecef0800000000000000
+      internalID: -86109439558437318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_35
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 5
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac2b8b96ae5d8170800000000000000
+      internalID: 8182300167669230754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can climb on some surfaces by jumping repeatedly_36
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 0
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4174abb10065b9aa0800000000000000
+      internalID: -6153229907406469356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      You can climb on some surfaces by jumping repeatedly_0: -268366933168991350
+      You can climb on some surfaces by jumping repeatedly_1: 146971617347057432
+      You can climb on some surfaces by jumping repeatedly_10: 8684570637530509532
+      You can climb on some surfaces by jumping repeatedly_11: 3423306791005352569
+      You can climb on some surfaces by jumping repeatedly_12: 569799733109268628
+      You can climb on some surfaces by jumping repeatedly_13: -2745658639753675326
+      You can climb on some surfaces by jumping repeatedly_14: -6110993725728802862
+      You can climb on some surfaces by jumping repeatedly_15: 1296550780432378084
+      You can climb on some surfaces by jumping repeatedly_16: 4838519633955149268
+      You can climb on some surfaces by jumping repeatedly_17: 5280816463060835682
+      You can climb on some surfaces by jumping repeatedly_18: -6398632557870277423
+      You can climb on some surfaces by jumping repeatedly_19: -1016597118418651335
+      You can climb on some surfaces by jumping repeatedly_2: 8293047733448205461
+      You can climb on some surfaces by jumping repeatedly_20: -8813459511005197909
+      You can climb on some surfaces by jumping repeatedly_21: 3812516648358336810
+      You can climb on some surfaces by jumping repeatedly_22: 4997008500117068136
+      You can climb on some surfaces by jumping repeatedly_23: -313713246910185704
+      You can climb on some surfaces by jumping repeatedly_24: 4029251457755307140
+      You can climb on some surfaces by jumping repeatedly_25: -4118885989465931100
+      You can climb on some surfaces by jumping repeatedly_26: -8581626839139978947
+      You can climb on some surfaces by jumping repeatedly_27: 9149507128177798041
+      You can climb on some surfaces by jumping repeatedly_28: 5677484174038994102
+      You can climb on some surfaces by jumping repeatedly_29: -3849572598843126931
+      You can climb on some surfaces by jumping repeatedly_3: 7716971173895844607
+      You can climb on some surfaces by jumping repeatedly_30: 6846558219795965649
+      You can climb on some surfaces by jumping repeatedly_31: 4188962446128597608
+      You can climb on some surfaces by jumping repeatedly_32: -7558786605840059261
+      You can climb on some surfaces by jumping repeatedly_33: 7638153381901162012
+      You can climb on some surfaces by jumping repeatedly_34: -86109439558437318
+      You can climb on some surfaces by jumping repeatedly_35: 8182300167669230754
+      You can climb on some surfaces by jumping repeatedly_36: -6153229907406469356
+      You can climb on some surfaces by jumping repeatedly_4: -5296484883489425337
+      You can climb on some surfaces by jumping repeatedly_5: 6640807726950880591
+      You can climb on some surfaces by jumping repeatedly_6: -7732783866781988963
+      You can climb on some surfaces by jumping repeatedly_7: -6547795600678426788
+      You can climb on some surfaces by jumping repeatedly_8: -5962195697863321528
+      You can climb on some surfaces by jumping repeatedly_9: 1996608827139550528
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

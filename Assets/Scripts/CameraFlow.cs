@@ -17,7 +17,8 @@ public class CameraFlow : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null) {target = player.transform; }
     }
 
     private void LateUpdate()
