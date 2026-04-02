@@ -75,6 +75,11 @@ public class UIManager : MonoSingleton<UIManager>
     }
     public static void HideTooltip()
     {
-        HUDTooltip.enabled = false;
+        try{
+            HUDTooltip.enabled = false;
+        }
+        catch{
+            Debug.LogError("Failed to hide tooltip.");
+        }
     }
 }
