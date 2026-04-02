@@ -8,13 +8,7 @@
   - Layers:
     - Default, TransparentFX, Ignore Raycast, projectile, Water, UI, Ground, Ladder, Enemy, Player, Interactable
 - Active game object:
-<<<<<<< HEAD
-  - Name: Player
-  - Tag: Player
-  - Layer: Player
-=======
-  - Name: CastlePalette
+  - Name: RepeatingProjectileEmmiter (12)
   - Tag: Untagged
   - Layer: Default
->>>>>>> cbe6dff30239d2cbe1bdecdebee8b408af45a876
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
