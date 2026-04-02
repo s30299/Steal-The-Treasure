@@ -86,7 +86,7 @@ public class Dash : Capability
 
         _dashDirection = Controller.LastHorizontalFacing;
         _animator.SetTrigger("Dashed");
-
+        AudioManager.PlayerDashed();
         float elapsed = 0f;
         OnDash?.Invoke();
         if (_IFramesRoutine != null)

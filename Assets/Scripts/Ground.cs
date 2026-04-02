@@ -25,9 +25,12 @@ public class GroundDetector : MonoBehaviour
     private readonly Collider2D[] ladderResults = new Collider2D[8];
     private readonly RaycastHit2D[] groundHits = new RaycastHit2D[8];
 
+    private bool wasOnGroundLastFrame=false;
+    private Rigidbody2D playerBody;
     private void Awake()
     {
         col = GetComponent<Collider2D>();
+        playerBody=GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
@@ -35,8 +38,14 @@ public class GroundDetector : MonoBehaviour
         if (groundGraceTimer > 0f)
             groundGraceTimer -= Time.fixedDeltaTime;
 
+        if (!wasOnGroundLastFrame && (playerBody.linearVelocityY > -0.1f && playerBody.linearVelocityY < 0.1f))
+        {
+            AudioManager.PlayerLanded();
+        }
+
         CheckGround();
         CheckLadder();
+        
     }
 
     private void CheckGround()
@@ -63,15 +72,20 @@ public class GroundDetector : MonoBehaviour
             ContactNormal = bestNormal;
             Friction = bestFriction;
             groundGraceTimer = groundGraceTime;
+            wasOnGroundLastFrame = true;
         }
         else if (groundGraceTimer <= 0f)
         {
             OnGround = false;
             Friction = 0f;
             ContactNormal = Vector2.zero;
+            wasOnGroundLastFrame = false;
         }
-
-        OnWall = foundWall;
+        else
+        {
+            wasOnGroundLastFrame = false;
+        }
+            OnWall = foundWall;
     }
 
     private void CheckGroundRay(

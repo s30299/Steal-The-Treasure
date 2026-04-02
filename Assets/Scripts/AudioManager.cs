@@ -1,20 +1,30 @@
 using System.Collections.Generic;
 using UnityEngine;
+public enum PlayerState
+{
+    None,Walking
+}
 public class AudioManager : MonoSingleton<AudioManager>
 {
     private AudioSource musicSource;
-    private List<AudioSource> audioSources=new();
-    
+    //private List<AudioSource> audioSources=new();
+    private AudioSource playerAudioSource;
+    private static PlayerState playerState=PlayerState.None;
+    private PlayerController playerController;
+    private double lastPlayedLandingSound = 0;
     void Start()
     {
+        var player = GameObject.FindGameObjectWithTag("Player");
         musicSource = GetComponent<AudioSource>();
-        foreach (AudioSource source in FindObjectsByType<AudioSource>())
-        {
-            if (source != musicSource)
-            {
-                audioSources.Add(source);
-            }
-        }
+        playerAudioSource = player.GetComponent<AudioSource>();
+        playerController=player.GetComponent<PlayerController>();
+        //foreach (AudioSource source in FindObjectsByType<AudioSource>())
+        //{
+        //    if (source != musicSource)
+        //    {
+        //        audioSources.Add(source);
+        //    }
+        //}
         SetMusicVolume(PlayerPrefs.GetFloat("musicVolume",1));
         SetEffectsVolume(PlayerPrefs.GetFloat("effectsVolume", 1));
     }
@@ -29,5 +39,62 @@ public class AudioManager : MonoSingleton<AudioManager>
         //audioSources.ForEach(source => source.volume = volume);
         PlayerPrefs.SetFloat("effectsVolume", volume);
         PlayerPrefs.Save();
+    }
+
+    private void Update()
+    {
+        PlayerAudio();
+
+    }
+    private void PlayerAudio()
+    {
+        if (Time.timeScale == 0)
+        {
+            playerAudioSource.volume = 0;
+        }
+        else
+        {
+            playerAudioSource.volume = PlayerPrefs.GetFloat("effectsVolume", 1);
+        }
+        Debug.Log(playerState.ToString());
+        if (playerState == PlayerState.Walking)
+        {
+            if (!playerAudioSource.isPlaying)
+            {
+                playerAudioSource.PlayOneShot(playerController.walkSound);
+            }
+        }
+    }
+
+    public static void PlayerWalking(bool b)
+    {
+        if (playerState == PlayerState.None && b)
+        {
+            playerState = PlayerState.Walking;
+        }
+        else if (playerState == PlayerState.Walking && !b)
+        {
+           playerState = PlayerState.None;
+        }
+    }
+    public static void PlayerJumped()
+    {
+        Instance.playerAudioSource.Stop();
+        Instance.playerAudioSource.PlayOneShot(Instance.playerController.JumpSound);
+    }
+    public static void PlayerLanded()
+    {
+        if (Time.timeAsDouble - Instance.lastPlayedLandingSound > 1)
+        {
+            Instance.playerAudioSource.Stop();
+            Instance.playerAudioSource.PlayOneShot(Instance.playerController.JumpSound);
+            Instance.lastPlayedLandingSound= Time.timeAsDouble;
+        }
+        playerState = PlayerState.None;
+    }
+    public static void PlayerDashed()
+    {
+        Instance.playerAudioSource.Stop();
+        Instance.playerAudioSource.PlayOneShot(Instance.playerController.dashSound);
     }
 }

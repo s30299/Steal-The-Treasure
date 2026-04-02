@@ -14,14 +14,15 @@ public class Move : Capability
     protected override void Update()
     {
         base.Update();
-        if (_animator == null || sr==null)
-        {
-            _animator = GetComponent<Animator>();
-            sr= GetComponent<SpriteRenderer>();
-        }
         RegisterMoveInput();
 
         _desiredVelocity = new Vector2(_direction.x, 0f) * Mathf.Max(MaxSpeed - Controller.Ground.Friction, 0f);
+    }
+    private void Start()
+    {
+        base.Start();
+        _animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void RegisterMoveInput()
@@ -43,8 +44,7 @@ public class Move : Capability
         {
             sr.flipX = _direction.x < 0;
         }
-        if (_direction.x != 0) { lastDirection = _direction.x; _animator.SetBool("IsWalking", true); }
-        else { _animator.SetBool("IsWalking", false); }
+        
     }
 
     protected override void FixedUpdate()
@@ -59,5 +59,16 @@ public class Move : Capability
         _velocity.x = Mathf.MoveTowards(_velocity.x, _desiredVelocity.x, _maxSpeedChange);
 
         Controller.Rigidbody2D.linearVelocity = _velocity;
+        if (_direction.x != 0)
+        {
+            lastDirection = _direction.x;
+            _animator.SetBool("IsWalking", true);
+            AudioManager.PlayerWalking(true);
+        }
+        else 
+        {
+            _animator.SetBool("IsWalking", false);
+            AudioManager.PlayerWalking(false);
+        }
     }
 }

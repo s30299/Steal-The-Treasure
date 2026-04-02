@@ -32,9 +32,11 @@ public class Jump : Capability
     public Action OnJumped;
 
     private Animator _animator;
+
     protected override void Awake()
     {
         base.Awake();
+
         _animator=GetComponent<Animator>();
 
         _isJumpReset = true;
@@ -173,11 +175,13 @@ public class Jump : Capability
         {
             _jumpPhase = 0;
             _animator.SetTrigger("StartJump");
+            AudioManager.PlayerJumped();
         }
         else if (!_forceJumpNow)
         {
             _jumpPhase++;
             _animator.SetTrigger("StartJump");
+            AudioManager.PlayerJumped();
         }
 
         _jumpBufferCounter = 0f;
@@ -192,7 +196,6 @@ public class Jump : Capability
         }
         else if (_velocity.y < -_verticalVelocityEpsilon)
         {
-            _animator.SetTrigger("JumpTopReached");
             _jumpSpeed += Mathf.Abs(_velocity.y);
         }
 
