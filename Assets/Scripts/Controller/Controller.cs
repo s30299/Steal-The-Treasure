@@ -16,6 +16,7 @@ public abstract class Controller : MonoBehaviour, IInputRetriever
     private int _inputLockCount;
     public bool InputLocked => _inputLockCount > 0;
     private static MovementDirection movementDirection=MovementDirection.Standing;
+    private static bool isDashing;
     
     public void LockInputsFor(float seconds)
     {
@@ -58,4 +59,5 @@ public abstract class Controller : MonoBehaviour, IInputRetriever
     public static void StandingStill(){movementDirection=MovementDirection.Standing;}
 
     public static MovementDirection GetMoveDirection(){return movementDirection;}
+
 }

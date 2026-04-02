@@ -21,7 +21,7 @@ public class Dash : Capability
     private float _inputDeadzone = 0.1f;
 
     private int _currentDashes;
-    private bool _isDashing;
+    public bool _isDashing;
     private Vector2 _dashDirection;
 
     private Coroutine _dashRoutine;

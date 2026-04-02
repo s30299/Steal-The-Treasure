@@ -184,4 +184,16 @@ public class MeleeEnemyController : MonoBehaviour
             Gizmos.DrawWireSphere(transform.position, attackRange);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        var obj= collision.gameObject;
+        if (obj.CompareTag("Player"))
+        {
+            if (obj.GetComponent<Dash>()._isDashing)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }

@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: 356b29b30ad85934db62913e1f628943
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6742130209149013740
+    second: You can now perform a double jump_0
+  - first:
+      213: 20857982886316506
+    second: You can now perform a double jump_1
+  - first:
+      213: 2793362341290880194
+    second: You can now perform a double jump_2
+  - first:
+      213: 8965751298252963115
+    second: You can now perform a double jump_3
+  - first:
+      213: -3742283725961415181
+    second: You can now perform a double jump_4
+  - first:
+      213: -133258111686615195
+    second: You can now perform a double jump_5
+  - first:
+      213: 8506116251172861623
+    second: You can now perform a double jump_6
+  - first:
+      213: -5584107234979562004
+    second: You can now perform a double jump_7
+  - first:
+      213: 2069413170632809370
+    second: You can now perform a double jump_8
+  - first:
+      213: -4860405831966464881
+    second: You can now perform a double jump_9
+  - first:
+      213: 6308247935425807754
+    second: You can now perform a double jump_10
+  - first:
+      213: 650758293554210894
+    second: You can now perform a double jump_11
+  - first:
+      213: 3591433857885694759
+    second: You can now perform a double jump_12
+  - first:
+      213: -6499733787140932664
+    second: You can now perform a double jump_13
+  - first:
+      213: 7024491289768379316
+    second: You can now perform a double jump_14
+  - first:
+      213: -3587954168280495696
+    second: You can now perform a double jump_15
+  - first:
+      213: -7003237006255957426
+    second: You can now perform a double jump_16
+  - first:
+      213: -1008640417064593990
+    second: You can now perform a double jump_17
+  - first:
+      213: -4735839886269379028
+    second: You can now perform a double jump_18
+  - first:
+      213: -8862459783653719184
+    second: You can now perform a double jump_19
+  - first:
+      213: -6596226738509161326
+    second: You can now perform a double jump_20
+  - first:
+      213: 8207886177827212374
+    second: You can now perform a double jump_21
+  - first:
+      213: -2738308447990363291
+    second: You can now perform a double jump_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: You can now perform a double jump_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4113e3ecb442f62a0800000000000000
+      internalID: -6742130209149013740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 44
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad98ba4993a1a4000800000000000000
+      internalID: 20857982886316506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 44
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cca891ef3404c620800000000000000
+      internalID: 2793362341290880194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 44
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2d7ddc9d4fbc6c70800000000000000
+      internalID: 8965751298252963115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_4
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 44
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5385957ccb01cc0800000000000000
+      internalID: -3742283725961415181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 44
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56fda751472962ef0800000000000000
+      internalID: -133258111686615195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_6
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 44
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6f551c9abcb0670800000000000000
+      internalID: 8506116251172861623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_7
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 44
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cedba5f3e044182b0800000000000000
+      internalID: -5584107234979562004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_8
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 44
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b5511805808bc10800000000000000
+      internalID: 2069413170632809370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_9
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 38
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84e669b5ae5c8cb0800000000000000
+      internalID: -4860405831966464881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_10
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 44
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85852223166b8750800000000000000
+      internalID: 6308247935425807754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_11
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 44
+        width: 40
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4820f95835f70900800000000000000
+      internalID: 650758293554210894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_12
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 44
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b6695c01657d130800000000000000
+      internalID: 3591433857885694759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_13
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 5
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb3cd2ce8e4cc5a0800000000000000
+      internalID: -6499733787140932664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_14
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 5
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b348765c910c7160800000000000000
+      internalID: 7024491289768379316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_15
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 5
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b9424991b6053ec0800000000000000
+      internalID: -3587954168280495696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_16
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 5
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4a5e3c2c018fce90800000000000000
+      internalID: -7003237006255957426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 5
+        width: 7
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab553ca72e69002f0800000000000000
+      internalID: -1008640417064593990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_18
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 5
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2e89c907bae64eb0800000000000000
+      internalID: -4735839886269379028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 11
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073822738c7320580800000000000000
+      internalID: -8862459783653719184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_20
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 5
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c5a39cabe7574a0800000000000000
+      internalID: -6596226738509161326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_21
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 5
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65cca32ddf448e170800000000000000
+      internalID: 8207886177827212374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can now perform a double jump_22
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 0
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b451889f29ff9d0800000000000000
+      internalID: -2738308447990363291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      You can now perform a double jump_0: -6742130209149013740
+      You can now perform a double jump_1: 20857982886316506
+      You can now perform a double jump_10: 6308247935425807754
+      You can now perform a double jump_11: 650758293554210894
+      You can now perform a double jump_12: 3591433857885694759
+      You can now perform a double jump_13: -6499733787140932664
+      You can now perform a double jump_14: 7024491289768379316
+      You can now perform a double jump_15: -3587954168280495696
+      You can now perform a double jump_16: -7003237006255957426
+      You can now perform a double jump_17: -1008640417064593990
+      You can now perform a double jump_18: -4735839886269379028
+      You can now perform a double jump_19: -8862459783653719184
+      You can now perform a double jump_2: 2793362341290880194
+      You can now perform a double jump_20: -6596226738509161326
+      You can now perform a double jump_21: 8207886177827212374
+      You can now perform a double jump_22: -2738308447990363291
+      You can now perform a double jump_3: 8965751298252963115
+      You can now perform a double jump_4: -3742283725961415181
+      You can now perform a double jump_5: -133258111686615195
+      You can now perform a double jump_6: 8506116251172861623
+      You can now perform a double jump_7: -5584107234979562004
+      You can now perform a double jump_8: 2069413170632809370
+      You can now perform a double jump_9: -4860405831966464881
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
