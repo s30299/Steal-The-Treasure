@@ -32,6 +32,17 @@ public class LevelManager : MonoSingleton<LevelManager>
         {
             playerProgress.skills[1].currentLevel = 0;
         }
+
+        if (PlayerPrefs.HasKey("doubleJumpCollected"))
+        {
+            var collectible = GameObject.Find("DoubleJump_Collectible");
+            if (collectible != null) { Destroy(collectible); }
+            playerProgress.skills[0].currentLevel = 2;
+        }
+        else
+        {
+            playerProgress.skills[0].currentLevel = 1;
+        }
     }
     public static void ChangeLevel(string levelName)
     {
