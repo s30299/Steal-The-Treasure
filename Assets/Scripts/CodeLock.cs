@@ -55,7 +55,7 @@ public class CodeLock : MonoBehaviour
             digit2 == correctCode[1] &&
             digit3 == correctCode[2])
         {
-            Debug.Log("Unlocked!");
+            UIManager.ShowWinScreen();
         }
     }
 }

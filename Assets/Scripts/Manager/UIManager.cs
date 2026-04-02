@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,11 @@ public class UIManager : MonoSingleton<UIManager>
     private Canvas pauseMenuCanvas;
     [SerializeField] private GameObject pauseFirstButton;
     [SerializeField] private GameObject HUDUI;
+
+    [SerializeField] private GameObject winUI;
+    private Canvas winCanvas;
+    [SerializeField] private GameObject winFirstButton;
+
     private static TextMeshProUGUI HUDTooltip;
     [SerializeField] private bool isInMainMenu = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,6 +28,7 @@ public class UIManager : MonoSingleton<UIManager>
         HUDTooltip.enabled = false;
         gameOverCanvas = gameOverUI.GetComponent<Canvas>();
         pauseMenuCanvas = pauseMenuUI.GetComponent<Canvas>();
+        winCanvas = winUI.GetComponent<Canvas>();
         //GameObject.Find("VolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume", 1);
         //GameObject.Find("MusicVolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("musicVolume", 1);
     }
@@ -58,7 +65,7 @@ public class UIManager : MonoSingleton<UIManager>
     }
     public void SwitchPause()
     {
-        if (!gameOverCanvas.enabled && !isInMainMenu)
+        if (!gameOverCanvas.enabled && !isInMainMenu && !winCanvas.enabled)
         {
             if (pauseMenuCanvas.enabled){Unpause();}
             else{Pause();}
@@ -81,5 +88,10 @@ public class UIManager : MonoSingleton<UIManager>
         catch{
             Debug.LogError("Failed to hide tooltip.");
         }
+    }
+    public static void ShowWinScreen()
+    {
+        Instance.winCanvas.enabled = true;
+        EventSystem.current.SetSelectedGameObject(Instance.winFirstButton);
     }
 }
