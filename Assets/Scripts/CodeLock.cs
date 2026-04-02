@@ -11,7 +11,7 @@ public class CodeLock : MonoBehaviour
     private int digit2 = 0;
     private int digit3 = 0;
 
-    private int[] correctCode = { 1, 2, 3 };
+    private int[] correctCode = { 0, 4, 2 };
 
     private void Start()
     {
