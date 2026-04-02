@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: 5a591f8b53e880e4fbd71dcfa31a4f4d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2007798397517330566
+    second: You can hit Enemies using Dash_0
+  - first:
+      213: -2895253690961753793
+    second: You can hit Enemies using Dash_1
+  - first:
+      213: -4871931397760943056
+    second: You can hit Enemies using Dash_2
+  - first:
+      213: 6463318944000931381
+    second: You can hit Enemies using Dash_3
+  - first:
+      213: 188239192187509124
+    second: You can hit Enemies using Dash_4
+  - first:
+      213: 2355327137092466257
+    second: You can hit Enemies using Dash_5
+  - first:
+      213: 4663195517641059687
+    second: You can hit Enemies using Dash_6
+  - first:
+      213: 6989933052778205979
+    second: You can hit Enemies using Dash_7
+  - first:
+      213: 8438638811322837418
+    second: You can hit Enemies using Dash_8
+  - first:
+      213: 1397775974771593824
+    second: You can hit Enemies using Dash_9
+  - first:
+      213: -2768621048954753824
+    second: You can hit Enemies using Dash_10
+  - first:
+      213: 3571928886164725077
+    second: You can hit Enemies using Dash_11
+  - first:
+      213: 4795120575663352579
+    second: You can hit Enemies using Dash_12
+  - first:
+      213: 2715144792483349349
+    second: You can hit Enemies using Dash_13
+  - first:
+      213: -5143795944956683595
+    second: You can hit Enemies using Dash_14
+  - first:
+      213: 8783038159294907528
+    second: You can hit Enemies using Dash_15
+  - first:
+      213: -2105387169167566474
+    second: You can hit Enemies using Dash_16
+  - first:
+      213: -4480543524579512834
+    second: You can hit Enemies using Dash_17
+  - first:
+      213: -3548613357125072226
+    second: You can hit Enemies using Dash_18
+  - first:
+      213: -2755760438728355986
+    second: You can hit Enemies using Dash_19
+  - first:
+      213: -842218296532628233
+    second: You can hit Enemies using Dash_20
+  - first:
+      213: 8143635155627131378
+    second: You can hit Enemies using Dash_21
+  - first:
+      213: 2901576093915703260
+    second: You can hit Enemies using Dash_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 45
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6887e9831022ddb10800000000000000
+      internalID: 2007798397517330566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 44
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3906979b1ef1d7d0800000000000000
+      internalID: -2895253690961753793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_2
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 44
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03cf262d43c636cb0800000000000000
+      internalID: -4871931397760943056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 44
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5367a3fd55252b950800000000000000
+      internalID: 6463318944000931381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_4
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 44
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48994274c82cc9200800000000000000
+      internalID: 188239192187509124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 45
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156fb385d8dcfa020800000000000000
+      internalID: 2355327137092466257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_6
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 45
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d603bdd9ff6b040800000000000000
+      internalID: 4663195517641059687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_7
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 44
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b135b96c31b310160800000000000000
+      internalID: 6989933052778205979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_8
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 45
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9e8b00a411c1570800000000000000
+      internalID: 8438638811322837418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_9
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 45
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06216d3e7d5e56310800000000000000
+      internalID: 1397775974771593824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_10
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 44
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ece16323d1e399d0800000000000000
+      internalID: -2768621048954753824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_11
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 45
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d1ec6a56a029130800000000000000
+      internalID: 3571928886164725077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_12
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 45
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ba49702c0bb8240800000000000000
+      internalID: 4795120575663352579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_13
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 44
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563c8b5adc12ea520800000000000000
+      internalID: 2715144792483349349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_14
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 5
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba13cf47d09d98b0800000000000000
+      internalID: -5143795944956683595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_15
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 5
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 884497ddbae93e970800000000000000
+      internalID: 8783038159294907528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_16
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 6
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6791a13468928c2e0800000000000000
+      internalID: -2105387169167566474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_17
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 6
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efde2c04769e1d1c0800000000000000
+      internalID: -4480543524579512834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_18
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9a8a5bf3fac0cec0800000000000000
+      internalID: -3548613357125072226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_19
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 6
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f858b4b7291c9d0800000000000000
+      internalID: -2755760438728355986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_20
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 5
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc86dbebe6df44f0800000000000000
+      internalID: -842218296532628233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 5
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1c987f601040170800000000000000
+      internalID: 8143635155627131378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: You can hit Enemies using Dash_22
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 6
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd76c9e8518744820800000000000000
+      internalID: 2901576093915703260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      You can hit Enemies using Dash_0: 2007798397517330566
+      You can hit Enemies using Dash_1: -2895253690961753793
+      You can hit Enemies using Dash_10: -2768621048954753824
+      You can hit Enemies using Dash_11: 3571928886164725077
+      You can hit Enemies using Dash_12: 4795120575663352579
+      You can hit Enemies using Dash_13: 2715144792483349349
+      You can hit Enemies using Dash_14: -5143795944956683595
+      You can hit Enemies using Dash_15: 8783038159294907528
+      You can hit Enemies using Dash_16: -2105387169167566474
+      You can hit Enemies using Dash_17: -4480543524579512834
+      You can hit Enemies using Dash_18: -3548613357125072226
+      You can hit Enemies using Dash_19: -2755760438728355986
+      You can hit Enemies using Dash_2: -4871931397760943056
+      You can hit Enemies using Dash_20: -842218296532628233
+      You can hit Enemies using Dash_21: 8143635155627131378
+      You can hit Enemies using Dash_22: 2901576093915703260
+      You can hit Enemies using Dash_3: 6463318944000931381
+      You can hit Enemies using Dash_4: 188239192187509124
+      You can hit Enemies using Dash_5: 2355327137092466257
+      You can hit Enemies using Dash_6: 4663195517641059687
+      You can hit Enemies using Dash_7: 6989933052778205979
+      You can hit Enemies using Dash_8: 8438638811322837418
+      You can hit Enemies using Dash_9: 1397775974771593824
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

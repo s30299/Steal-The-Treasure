@@ -4,7 +4,7 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 10f;
     private Vector2 direction;
-    private float despawnRange = 50f;
+    public float despawnRange = 50f;
     private float distanceTravelled = 0;
     [SerializeField] private AudioClip impactSound;
     private AudioSource audioSource;

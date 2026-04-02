@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 public enum ProjectileEmmiterType
 {
@@ -15,6 +16,7 @@ public class ProjectileEmmiter : MonoBehaviour
     public GameObject projectile;
     public float projectileSpeed=15f;
     public float shootDelay;
+    public float projectileRange = 50f;
     void Start()
     {
         switch (direction)
@@ -35,6 +37,7 @@ public class ProjectileEmmiter : MonoBehaviour
         var newProjectile = Instantiate(projectile, transform.position, projectile.transform.rotation).GetComponent<Projectile>();
         newProjectile.SetDirection(projectileDirection);
         newProjectile.speed = projectileSpeed;
+        newProjectile.despawnRange = projectileRange;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,6 +45,17 @@ public class ProjectileEmmiter : MonoBehaviour
         if (type == ProjectileEmmiterType.PlayerActivated && collision.gameObject.CompareTag("Player"))
         {
             ShootProjectile();
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        switch (direction)
+        {
+            case Direction.Left: { Gizmos.DrawLine(transform.position, transform.position + (Vector3.left * projectileRange)); break; }
+            case Direction.Right: { Gizmos.DrawLine(transform.position, transform.position + (Vector3.right * projectileRange)); break; }
+            case Direction.Down: { Gizmos.DrawLine(transform.position, transform.position + (Vector3.down * projectileRange)); break; }
+            case Direction.Up: { Gizmos.DrawLine(transform.position, transform.position + (Vector3.up * projectileRange)); break; }
         }
     }
 }

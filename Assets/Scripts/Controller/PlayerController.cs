@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerController : Controller
+public class PlayerController : Controller, IInputRetriever
 {
     private double lastOnDeathReceived=0;
 
@@ -25,6 +25,8 @@ public class PlayerController : Controller
     public override bool RetrieveInteractInput() => InputLocked ? false : InputManager.ActionInteract.IsPressed();
     public override bool RetrieveAttackInput() => InputLocked ? false : InputManager.ActionAttack.triggered;
     public override bool RetrieveDashInput() => InputLocked ? false : InputManager.ActionDash.triggered;
+    public override bool RetrieveLeftMouseInput() => InputLocked ? false : InputManager.LeftMouse.triggered;
+    public override bool RetrieveRightMouseInput() => InputLocked ? false : InputManager.RightMouse.triggered;
 
     public void OnDeath(){
         if (Time.timeAsDouble - lastOnDeathReceived >= 1)

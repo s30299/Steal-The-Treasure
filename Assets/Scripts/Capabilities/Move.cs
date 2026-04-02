@@ -44,6 +44,9 @@ public class Move : Capability
         {
             sr.flipX = _direction.x < 0;
         }
+        if (_direction.x > 0) { Controller.MovingRight(); }
+        else if (_direction.x < 0) { Controller.MovingLeft(); }
+        else { Controller.StandingStill();}
         
     }
 

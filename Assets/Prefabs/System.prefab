@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Over!
+  m_text: You Died!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -975,7 +975,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.73
+  orthographic size: 8.37
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1014,6 +1014,7 @@ MonoBehaviour:
   smoothTime: 0.2
   maxDistance: 3
   offset: {x: 0, y: 1.5, z: -10}
+  sideOffset: 1
 --- !u!1 &1886614647397823878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,6 +1986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   firstLevel: {fileID: 102900000, guid: 39dd8d902626e454d94f2e35c3305f06, type: 3}
   mainMenu: {fileID: 102900000, guid: 4f9faa478e5107c47becb495090a4644, type: 3}
+  playerProgress: {fileID: 11400000, guid: ef48699030b726c4d895a627d89cf013, type: 2}
 --- !u!1 &3637129167731776589
 GameObject:
   m_ObjectHideFlags: 0
