@@ -28,3 +28,7 @@ Unity 2d platform game
 
 
 https://docs.google.com/presentation/d/1PkwPz30XmZ1PjInuC5ZbLXEl4SmlmsFm6igE-txVzpM/edit?slide=id.g3d4447bfb89_0_239#slide=id.g3d4447bfb89_0_239
+## Screenshots
+![Image1](Assets/Images/readmeImages/Image1.png)
+![Image2](Assets/Images/readmeImages/Image2.png)
+![Image3](Assets/Images/readmeImages/Image3.png)
