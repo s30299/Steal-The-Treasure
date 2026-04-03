@@ -62,11 +62,14 @@ public class Move : Capability
         _velocity.x = Mathf.MoveTowards(_velocity.x, _desiredVelocity.x, _maxSpeedChange);
 
         Controller.Rigidbody2D.linearVelocity = _velocity;
-        if (_direction.x != 0 && _onGround)
+        if (_direction.x != 0)
         {
             lastDirection = _direction.x;
-            _animator.SetBool("IsWalking", true);
-            AudioManager.PlayerWalking(true);
+            if (_onGround)
+            {
+                _animator.SetBool("IsWalking", true);
+                AudioManager.PlayerWalking(true);
+            }
         }
         else 
         {

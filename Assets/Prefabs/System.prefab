@@ -1683,8 +1683,8 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 6309426598806547163}
   pauseFirstButton: {fileID: 8198647488130803979}
   HUDUI: {fileID: 8816509964570163023}
-  winUI: {fileID: 0}
-  winFirstButton: {fileID: 0}
+  winUI: {fileID: 1558257393143655973}
+  winFirstButton: {fileID: 5038598550409422038}
   isInMainMenu: 0
 --- !u!1 &2403251052365704109
 GameObject:
@@ -2229,8 +2229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda31cda152b4b9469eff2f1bdb1850b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  firstLevel: {fileID: 102900000, guid: 39dd8d902626e454d94f2e35c3305f06, type: 3}
-  mainMenu: {fileID: 102900000, guid: 4f9faa478e5107c47becb495090a4644, type: 3}
   playerProgress: {fileID: 11400000, guid: ef48699030b726c4d895a627d89cf013, type: 2}
 --- !u!1 &3637129167731776589
 GameObject:
@@ -3514,7 +3512,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2537446829735626179}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7526147657630748207}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7221847054744138617
 GameObject:
   m_ObjectHideFlags: 0
@@ -4381,7 +4391,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8816509964570163023}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
