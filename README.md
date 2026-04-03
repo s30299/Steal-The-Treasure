@@ -1,5 +1,6 @@
 # Steal-The-Treasure
 Unity 2d platform game
+Steal The Treasure to gra platformowa, w której gracz eksploruje trzy poziomy, zbiera elementy kodu do kłódki i po jego poprawnym wpisaniu odblokowuje skarb i wygrywa.
 ## Controls
 ![Controller Layout](Assets/Images/ControllerLayout.png)
 ![Keyboard Layout](Assets/Images/KeyboardLayout.png)
