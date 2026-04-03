@@ -78,16 +78,16 @@ public class AudioManager : MonoSingleton<AudioManager>
         Instance.playerAudioSource.Stop();
         Instance.playerAudioSource.PlayOneShot(Instance.playerController.JumpSound);
     }
-    public static void PlayerLanded()
-    {
-        if (Time.timeAsDouble - Instance.lastPlayedLandingSound > 1)
-        {
-            Instance.playerAudioSource.Stop();
-            Instance.playerAudioSource.PlayOneShot(Instance.playerController.JumpSound);
-            Instance.lastPlayedLandingSound= Time.timeAsDouble;
-        }
-        playerState = PlayerState.None;
-    }
+    //public static void PlayerLanded()
+    //{
+    //    if (Time.timeAsDouble - Instance.lastPlayedLandingSound > 1)
+    //    {
+    //        Instance.playerAudioSource.Stop();
+    //        Instance.playerAudioSource.PlayOneShot(Instance.playerController.JumpSound);
+    //        Instance.lastPlayedLandingSound= Time.timeAsDouble;
+    //    }
+    //    playerState = PlayerState.None;
+    //}
     public static void PlayerDashed()
     {
         Instance.playerAudioSource.Stop();

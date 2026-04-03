@@ -38,10 +38,10 @@ public class GroundDetector : MonoBehaviour
         if (groundGraceTimer > 0f)
             groundGraceTimer -= Time.fixedDeltaTime;
 
-        if (!wasOnGroundLastFrame && (playerBody.linearVelocityY > -0.1f && playerBody.linearVelocityY < 0.1f))
-        {
-            AudioManager.PlayerLanded();
-        }
+        //if (!wasOnGroundLastFrame && (playerBody.linearVelocityY > -0.1f && playerBody.linearVelocityY < 0.1f))
+        //{
+        //    AudioManager.PlayerLanded();
+        //}
 
         CheckGround();
         CheckLadder();

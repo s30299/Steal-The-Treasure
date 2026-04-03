@@ -62,7 +62,7 @@ public class Move : Capability
         _velocity.x = Mathf.MoveTowards(_velocity.x, _desiredVelocity.x, _maxSpeedChange);
 
         Controller.Rigidbody2D.linearVelocity = _velocity;
-        if (_direction.x != 0)
+        if (_direction.x != 0 && _onGround)
         {
             lastDirection = _direction.x;
             _animator.SetBool("IsWalking", true);
@@ -73,5 +73,6 @@ public class Move : Capability
             _animator.SetBool("IsWalking", false);
             AudioManager.PlayerWalking(false);
         }
+        _animator.SetFloat("VelocityY", Controller.Rigidbody2D.linearVelocityY);
     }
 }
