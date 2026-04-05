@@ -40,4 +40,15 @@ public class InputManager : MonoSingleton<InputManager>
     {
         return true;
     }
+
+    public static void CaptureCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+    public static void ShowCursor()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+    }
 }

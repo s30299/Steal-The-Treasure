@@ -7,15 +7,12 @@ using UnityEngine.UI;
 public class UIManager : MonoSingleton<UIManager>
 {
     [SerializeField] private GameObject gameOverUI;
-    private Canvas gameOverCanvas;
     [SerializeField] private GameObject gameOverFirstButton;
     [SerializeField] private GameObject pauseMenuUI;
-    private Canvas pauseMenuCanvas;
     [SerializeField] private GameObject pauseFirstButton;
     [SerializeField] private GameObject HUDUI;
 
     [SerializeField] private GameObject winUI;
-    private Canvas winCanvas;
     [SerializeField] private GameObject winFirstButton;
 
     private static TextMeshProUGUI HUDTooltip;
@@ -25,48 +22,43 @@ public class UIManager : MonoSingleton<UIManager>
     {
         HUDTooltip = GameObject.Find("ToolTip (TMP)").GetComponent<TextMeshProUGUI>();
         HUDTooltip.enabled = false;
-        gameOverCanvas = gameOverUI.GetComponent<Canvas>();
-        pauseMenuCanvas = pauseMenuUI.GetComponent<Canvas>();
-        winCanvas = winUI.GetComponent<Canvas>();
+        InputManager.CaptureCursor();
         //GameObject.Find("VolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume", 1);
         //GameObject.Find("MusicVolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("musicVolume", 1);
     }
     public void EnableGameOverUI()
     {
-        gameOverCanvas.enabled = true;
+        gameOverUI.SetActive(true);
         EventSystem.current.SetSelectedGameObject(gameOverFirstButton);
+        InputManager.ShowCursor();
     }
-    public void DisableGameOverUI() {
-        gameOverCanvas.enabled = false;
+    public static void DisableGameOverUI() {
+        Instance.gameOverUI.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
+        InputManager.CaptureCursor();
     }
-    public void ReloadScene()
-    {
-        Time.timeScale = 1.0f;
-        DisableGameOverUI();
-        InputManager.DisableInput();
-        var sceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(sceneName);
-    }
+    
     public void Pause()
     {
         Time.timeScale=0;
         EventSystem.current.SetSelectedGameObject(pauseFirstButton);
-        pauseMenuCanvas.enabled = true;
+        pauseMenuUI.SetActive(true);
         GameObject.Find("VolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume",1);
         GameObject.Find("MusicVolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("musicVolume",1);
+        InputManager.ShowCursor();
     }
     public void Unpause()
     {
         Time.timeScale = 1.0f;
         EventSystem.current.SetSelectedGameObject(null);
-        pauseMenuCanvas.enabled=false;
+        pauseMenuUI.SetActive(false);
+        InputManager.CaptureCursor();
     }
     public void SwitchPause()
     {
-        if (!gameOverCanvas.enabled && !isInMainMenu && !winCanvas.enabled)
+        if (!gameOverUI.activeInHierarchy && !isInMainMenu && !winUI.activeInHierarchy)
         {
-            if (pauseMenuCanvas.enabled){Unpause();}
+            if (pauseMenuUI.activeInHierarchy){Unpause();}
             else{Pause();}
         }
     }
@@ -90,7 +82,8 @@ public class UIManager : MonoSingleton<UIManager>
     }
     public static void ShowWinScreen()
     {
-        Instance.winCanvas.enabled = true;
+        Instance.winUI.SetActive(true);
         EventSystem.current.SetSelectedGameObject(Instance.winFirstButton);
+        InputManager.ShowCursor();
     }
 }

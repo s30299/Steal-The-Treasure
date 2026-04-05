@@ -79,4 +79,12 @@ public class LevelManager : MonoSingleton<LevelManager>
         InputManager.DisableInput();
         SceneManager.LoadScene("MainMenu");
     }
+
+    public static void ReloadScene()
+    {
+        Time.timeScale = 1.0f;
+        UIManager.DisableGameOverUI();
+        InputManager.DisableInput();
+        SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel", "Treasury"));
+    }
 }

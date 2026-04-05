@@ -16,7 +16,7 @@ public class MainMenuManager : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Confined;
+        InputManager.ShowCursor();
         DisableOptionsMenu();
         EnableMainMenu();
     }
