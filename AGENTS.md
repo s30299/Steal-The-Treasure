@@ -4,5 +4,5 @@
 - Active game object:
   - Name: MainMenu
   - Tag: Untagged
-  - Layer: UI
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

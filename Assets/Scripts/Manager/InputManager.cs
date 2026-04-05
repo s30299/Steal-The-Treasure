@@ -31,4 +31,13 @@ public class InputManager : MonoSingleton<InputManager>
     {
         return "E";
     }
+
+    public static bool UsingController()
+    {
+        return true;
+    }
+    public static bool UsingKeyboard()
+    {
+        return true;
+    }
 }
