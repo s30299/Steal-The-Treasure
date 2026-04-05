@@ -70,12 +70,16 @@ public class Move : Capability
                 _animator.SetBool("IsWalking", true);
                 AudioManager.PlayerWalking(true);
             }
+            else
+            {
+                AudioManager.PlayerWalking(false);
+            }
         }
         else 
         {
             _animator.SetBool("IsWalking", false);
             AudioManager.PlayerWalking(false);
         }
-        _animator.SetFloat("VelocityY", Controller.Rigidbody2D.linearVelocityY);
+        _animator.SetFloat("VelocityY", _velocity.y+1f);
     }
 }
