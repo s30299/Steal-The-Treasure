@@ -7,6 +7,11 @@ public class LevelManager : MonoSingleton<LevelManager>
     [SerializeField] private PlayerProgress playerProgress;
     public void Start()
     {
+        if (PlayerPrefs.HasKey("musicProgress"))
+        {
+            AudioManager.GetMusicSource().time = PlayerPrefs.GetFloat("musicProgress");
+        }
+
         var player = GameObject.FindGameObjectWithTag("Player");
         if (PlayerPrefs.HasKey("posX")&& player!=null)
         {
@@ -22,13 +27,17 @@ public class LevelManager : MonoSingleton<LevelManager>
         }
         AbilityCheck();
         SetCode();
+
+        
     }
     public static void ChangeLevel(string levelName)
     {
         InputManager.DisableInput();
         PlayerPrefs.SetString("currentLevel", levelName);
-        SceneManager.LoadScene(levelName);
+        PlayerPrefs.DeleteKey("musicProgress");
         PlayerPrefs.Save();
+        SceneManager.LoadScene(levelName);
+        
     }
 
     public void LoadFirstLevel()
@@ -70,6 +79,8 @@ public class LevelManager : MonoSingleton<LevelManager>
         Time.timeScale = 1.0f;
         UIManager.DisableGameOverUI();
         InputManager.DisableInput();
+        PlayerPrefs.SetFloat("musicProgress", AudioManager.GetMusicSource().time);
+        PlayerPrefs.Save();
         SceneManager.LoadScene(PlayerPrefs.GetString("currentLevel", "Treasury"));
     }
 

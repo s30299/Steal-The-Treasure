@@ -15,6 +15,9 @@ Steal The Treasure to gra platformowa, w której gracz eksploruje trzy poziomy, 
 - [Platformer Set](https://assetstore.unity.com/packages/2d/environments/platformer-set-150023#reviews) by Szadi Art
 ### Music
 - **"Stealthy Infiltration"** [Free 25 Fantasy RPG Game Tracks (No Copyright) Vol. 3](https://www.youtube.com/watch?v=OwTEhR7QA7E&t=1519s) by AlkaKrab
+- **"Lost River"** [Free 25 Fantasy RPG Game Tracks (No Copyright) Vol. 3](https://youtu.be/OwTEhR7QA7E?si=xqlfAqPqVzHdqjJn&t=919) by AlkaKrab
+- **"Clash Of Arcane Titans"** [Free 25 Fantasy RPG Game Tracks (No Copyright) Vol. 3](https://youtu.be/OwTEhR7QA7E?si=5A76S8wCwXd6JCpl&t=1394) by AlkaKrab
+- **"Battle Of The Skies"** [Free 25 Fantasy RPG Game Tracks (No Copyright) Vol. 3](https://youtu.be/OwTEhR7QA7E?si=lqWprTkYgY7zoDsn&t=1396) by AlkaKrab
 ### SFX
 #### Skeleton
 - **Idle sound** [Rattling Bones](https://pixabay.com/sound-effects/film-special-effects-rattling-bones-105394/) by spookymodem (Freesound)

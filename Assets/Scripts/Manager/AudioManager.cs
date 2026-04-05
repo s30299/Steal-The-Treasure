@@ -13,10 +13,15 @@ public class AudioManager : MonoSingleton<AudioManager>
     private PlayerController playerController;
     private double lastPlayedLandingSound = 0;
     private GameObject player;
+    private void Awake()
+    {
+        base.Awake();
+        musicSource = GetComponent<AudioSource>();
+    }
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        musicSource = GetComponent<AudioSource>();
+        
         if (player != null)
         {
             playerAudioSource = player.GetComponent<AudioSource>();
@@ -107,5 +112,10 @@ public class AudioManager : MonoSingleton<AudioManager>
     {
         Instance.playerAudioSource.Stop();
         Instance.playerAudioSource.PlayOneShot(Instance.playerController.dashSound);
+    }
+
+    public static AudioSource GetMusicSource()
+    {
+        return Instance.musicSource;
     }
 }
