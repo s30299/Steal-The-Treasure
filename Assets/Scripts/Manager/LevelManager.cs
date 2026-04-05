@@ -71,6 +71,8 @@ public class LevelManager : MonoSingleton<LevelManager>
     public void GoToMainMenu()
     {
         InputManager.DisableInput();
+        PlayerPrefs.DeleteKey("musicProgress");
+        PlayerPrefs.Save();
         SceneManager.LoadScene("MainMenu");
     }
 
