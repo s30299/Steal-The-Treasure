@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoSingleton<UIManager>
@@ -41,6 +40,7 @@ public class UIManager : MonoSingleton<UIManager>
     public void Pause()
     {
         Time.timeScale=0;
+        AudioManager.PauseSoundEffects();
         EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         pauseMenuUI.SetActive(true);
         GameObject.Find("VolumeSlider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("effectsVolume",1);
@@ -50,6 +50,7 @@ public class UIManager : MonoSingleton<UIManager>
     public void Unpause()
     {
         Time.timeScale = 1.0f;
+        AudioManager.UnpauseSoundEffects();
         EventSystem.current.SetSelectedGameObject(null);
         pauseMenuUI.SetActive(false);
         InputManager.CaptureCursor();

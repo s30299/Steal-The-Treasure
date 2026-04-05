@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 public enum PlayerState
 {
@@ -22,6 +24,19 @@ public class AudioManager : MonoSingleton<AudioManager>
         }
         SetMusicVolume(PlayerPrefs.GetFloat("musicVolume",1));
         SetEffectsVolume(PlayerPrefs.GetFloat("effectsVolume", 1));
+        UnpauseSoundEffects();
+    }
+    private List<AudioSource> GetAudioSources()
+    {
+        List<AudioSource> sources = new();
+        foreach(AudioSource source in FindObjectsByType<AudioSource>())
+        {
+            if (source != musicSource)
+            {
+                sources.Add(source);
+            }
+        }
+        return sources;
     }
     public void SetMusicVolume(float volume)
     {
@@ -31,10 +46,18 @@ public class AudioManager : MonoSingleton<AudioManager>
     }
     public void SetEffectsVolume(float volume)
     {
+        GetAudioSources().ForEach(source=>source.volume = volume);
         PlayerPrefs.SetFloat("effectsVolume", volume);
         PlayerPrefs.Save();
     }
-
+    public static void PauseSoundEffects()
+    {
+        Instance.GetAudioSources().ForEach(source=>source.Pause());
+    }
+    public static void UnpauseSoundEffects()
+    {
+        Instance.GetAudioSources().ForEach(source => source.UnPause());
+    }
     private void Update()
     {
         if (player != null)
@@ -44,14 +67,6 @@ public class AudioManager : MonoSingleton<AudioManager>
     }
     private void PlayerAudio()
     {
-        if (Time.timeScale == 0)
-        {
-            playerAudioSource.volume = 0;
-        }
-        else
-        {
-            playerAudioSource.volume = PlayerPrefs.GetFloat("effectsVolume", 1);
-        }
 
         if (playerState == PlayerState.Walking)
         {
