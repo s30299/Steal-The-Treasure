@@ -11,13 +11,16 @@ public class CodeLock : MonoBehaviour
     private int digit2 = 0;
     private int digit3 = 0;
 
-    private int[] correctCode = { 0, 4, 2 };
+    public int[] correctCode = { 10, 10, 10 };
 
     private void Start()
     {
         UpdateUI();
+        correctCode[0] = PlayerPrefs.GetInt("Code1");
+        correctCode[1] = PlayerPrefs.GetInt("Code2");
+        correctCode[2] = PlayerPrefs.GetInt("Code3");
     }
-
+    
     public void IncreaseDigit(int index)
     {
         // Debug.LogWarning("IncreaseDigit called with index: " + index);
