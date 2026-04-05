@@ -2648,8 +2648,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e422468e46a5465408c93ed63ccff968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
-  firstButton: {fileID: 1885367088}
+  firstButton: {fileID: 956418387}
   mainMenu: {fileID: 1100801727}
+  continueButton: {fileID: 1885367088}
   optionsFirstButton: {fileID: 2080571703}
   optionsMenu: {fileID: 1316396864}
   optionsSFX: {fileID: 2080571703}

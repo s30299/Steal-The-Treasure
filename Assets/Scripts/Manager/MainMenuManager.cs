@@ -6,6 +6,7 @@ public class MainMenuManager : MonoBehaviour
 {
     [SerializeField]private GameObject firstButton;
     [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject continueButton;
     [SerializeField] private GameObject optionsFirstButton;
     [SerializeField] private GameObject optionsMenu;
 
@@ -16,6 +17,14 @@ public class MainMenuManager : MonoBehaviour
 
     void Start()
     {
+        if (!PlayerPrefs.HasKey("currentLevel"))
+        {
+            continueButton.SetActive(false);
+        }
+        else
+        {
+            firstButton = continueButton;
+        }
         InputManager.ShowCursor();
         DisableOptionsMenu();
         EnableMainMenu();
